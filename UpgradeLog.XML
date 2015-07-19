@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?><?xml-stylesheet type='text/xsl' href='_UpgradeReport_Files/UpgradeReport.xslt'?><UpgradeLog>
+<Properties><Property Name="Solution" Value="Inventory">
+</Property><Property Name="Solution File" Value="c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory.sln">
+</Property><Property Name="Date" Value="Thursday, June 04, 2015">
+</Property><Property Name="Time" Value="21:25:49 PM">
+</Property></Properties><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="Project file successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\DataAccess.csproj">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\Class1.cs" Description="File successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\Class1.cs">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DBAdapter.cs" Description="File successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\DBAdapter.cs">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DBCommand.cs" Description="File successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\DBCommand.cs">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DBConnection.cs" Description="File successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\DBConnection.cs">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\Properties\AssemblyInfo.cs" Description="File successfully backed up as c:\users\neil\documents\visual studio 2010\Projects\Inventory\Backup\Properties\AssemblyInfo.cs">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="Project converted successfully">
+</Event><Event ErrorLevel="3" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="Converted">
+</Event><Event ErrorLevel="0" Project="DataAccess" Source="DataAccess\DataAccess.csproj" Description="Scan complete: Upgrade not required for project files.">
+</Event></UpgradeLog>

@@ -1,0 +1,22 @@
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\FrameWork\bin\Debug\FrameWork.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\FrameWork\obj\Debug\ResolveAssemblyReference.cache
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\FrameWork\obj\Debug\FrameWork.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\bin\Debug\FrameWork.dll
+C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\obj\Debug\FrameWork.dll
+C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+J:\Inventory\FrameWork\bin\Debug\FrameWork.dll
+J:\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+J:\Inventory\FrameWork\obj\Debug\FrameWork.dll
+J:\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+G:\Inventory\FrameWork\bin\Debug\FrameWork.dll
+G:\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+G:\Inventory\FrameWork\obj\Debug\FrameWork.dll
+G:\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+C:\Users\neil\Documents\GitHub\Inventory\FrameWork\bin\Debug\FrameWork.dll
+C:\Users\neil\Documents\GitHub\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
+C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.dll
+C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.pdb
