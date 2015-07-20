@@ -181,8 +181,8 @@ namespace Inventory
             FrameWork.DRSIForm drsi = new FrameWork.DRSIForm();
             FrameWork.DRSISub drsisub = new DRSISub();
             busDISRForm busDISR = new busDISRForm();
-            drsi.CustomerFKID = 0;
-            drsi.ProductFKID = 0;
+            drsi.CustomerFKID = int.Parse(this.drpCustomer.SelectedValue);
+            drsi.ProductFKID = int.Parse(this.drpProduct.SelectedValue);
             drsi.TotalPcs = lblPcs.Text;
             drsi.TotalUOM = lblUOM.Text;
             drsi.TotalWeight = lblWeight.Text;
