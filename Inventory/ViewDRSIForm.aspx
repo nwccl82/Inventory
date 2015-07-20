@@ -8,6 +8,13 @@
     <table>
         <tr>
             <td>
+                <asp:Label ID="Label2" runat="server" Text="Summary Form"></asp:Label>
+            </td>
+            <td>
+            </td>
+        </tr>
+        <tr>
+            <td>
             </td>
             <td>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
@@ -43,14 +50,21 @@
         </tr>
         <tr>
             <td>
+                <asp:Label ID="Label3" runat="server" Text="Detail Form"></asp:Label>
             </td>
             <td>
-                 <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4"
+            </td>
+        </tr>
+        <tr>
+            <td>
+            </td>
+            <td>
+                <asp:GridView ID="GridView2" runat="server" AutoGenerateColumns="False" CellPadding="4"
                     DataKeyNames="id" EnableModelValidation="True" ForeColor="#333333" GridLines="None"
                     OnSelectedIndexChanged="GridView2_SelectedIndexChanged" OnRowCommand="GridView2_RowCommand">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
-                        <asp:CommandField ShowSelectButton="True" />
+                       <%-- <asp:CommandField ShowSelectButton="True" />--%>
                         <%--  <asp:TemplateField>
                             <ItemTemplate>
                                 <asp:LinkButton ID="LinkButton1" runat="server" CommandName="del">Delete</asp:LinkButton>
@@ -61,7 +75,6 @@
                         <asp:BoundField DataField="CageNo" HeaderText="CageNo" />
                         <asp:BoundField DataField="Weight" HeaderText="Weight" />
                         <asp:BoundField DataField="UnitOfMeasure" HeaderText="UnitOfMeasure" />
-                      
                         <%-- <asp:BoundField DataField="cellphoneNo" HeaderText="CellPhone No" />
             <asp:BoundField DataField="email" HeaderText="Email" />
             <asp:BoundField DataField="position" HeaderText="Position" />--%>

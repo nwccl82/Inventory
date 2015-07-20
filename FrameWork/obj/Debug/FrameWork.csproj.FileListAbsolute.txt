@@ -20,3 +20,4 @@ C:\Users\neil\Documents\GitHub\Inventory\FrameWork\bin\Debug\FrameWork.pdb
 C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
 C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.dll
 C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+G:\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache

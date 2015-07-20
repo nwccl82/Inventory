@@ -36,9 +36,11 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
                     IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/Login.aspx" Text="Login Page" />
                         <asp:MenuItem NavigateUrl="~/CustomerProfile.aspx" Text="Customer" />
-                        <asp:MenuItem NavigateUrl="~/DRSIForm.aspx" Text="DRSIForm" />
+                        <asp:MenuItem Text="DRSIForm">
+                            <asp:MenuItem NavigateUrl="~/DRSIForm.aspx" Text="DRSIForm" />
+                            <asp:MenuItem NavigateUrl="~/ViewDRSIForm.aspx" Text="ViewDRSIForm" />
+                        </asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/SuppliersProfile.aspx" Text="Supplier" />
                         <asp:MenuItem NavigateUrl="~/DailyMonitoring.aspx" Text="DailyMonitoring" />
                         <asp:MenuItem Text="Database Creation">
