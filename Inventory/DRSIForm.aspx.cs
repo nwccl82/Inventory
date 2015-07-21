@@ -191,6 +191,7 @@ namespace Inventory
             drsi.TotalCost = lblTCost.Text;
             drsi.OrderBy = users;
             string x = busDISR.insertDRSI(drsi);
+            string y = string.Empty;
             foreach (DataRow dr in dtgridList.Rows)
             {
                 drsisub.DRSiformID = int.Parse(x);
