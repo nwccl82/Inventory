@@ -57,5 +57,16 @@ namespace Inventory
         {
 
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            busDISRForm busDISR = new busDISRForm();
+            FrameWork.DRSIForm[] frmDRSI;
+
+            frmDRSI = busDISR.allDrSIForm();
+            this.GridView1.PageIndex = e.NewPageIndex;
+            this.GridView1.DataSource = frmDRSI;
+            this.GridView1.DataBind();
+        }
     }
 }

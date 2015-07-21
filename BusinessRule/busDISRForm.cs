@@ -17,7 +17,7 @@ namespace BusinessRule
             string Message = string.Empty;
             int result = 0;
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].DRSIForm ([CustomerFKID],[ProductFKID],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost]) VALUES (@CustomerFKID,@ProductFKID,@TotalPcs,@TotalUOM,@TotalWeight,@TotalUnitCost,@TotalCost)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].DRSIForm ([CustomerFKID],[ProductFKID],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]) VALUES (@CustomerFKID,@ProductFKID,@TotalPcs,@TotalUOM,@TotalWeight,@TotalUnitCost,@TotalCost, getdate(),@OrderBy,@CheckBy)", con);
             cmd.Parameters.AddWithValue("@CustomerFKID", drsi.CustomerFKID);
             cmd.Parameters.AddWithValue("@ProductFKID", drsi.ProductFKID);
             cmd.Parameters.AddWithValue("@TotalPcs", drsi.TotalPcs);
@@ -25,6 +25,9 @@ namespace BusinessRule
             cmd.Parameters.AddWithValue("@TotalWeight", drsi.TotalWeight);
             cmd.Parameters.AddWithValue("@TotalUnitCost", drsi.TotalUnitCost);
             cmd.Parameters.AddWithValue("@TotalCost", drsi.TotalCost);
+            
+            cmd.Parameters.AddWithValue("@OrderBy", drsi.OrderBy);
+            cmd.Parameters.AddWithValue("@CheckBy", drsi.CheckBy != null ? drsi.CheckBy : string.Empty);
             result = cmd.ExecuteNonQuery();
             con.Close();
             string query ="select top 1 ID from [DRSIForm] order by id desc";
@@ -68,7 +71,7 @@ namespace BusinessRule
 
         public FrameWork.DRSIForm[] allDrSIForm()
         {
-            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost]  FROM [inventory].[dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
+            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]  FROM [inventory].[dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);

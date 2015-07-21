@@ -32,5 +32,11 @@ namespace FrameWork
         public String Company { get; set; }
 
         public String ProductName { get; set; }
+        
+        public DateTime OrderDate { get; set; }
+
+        public String OrderBy { get; set; }
+
+        public String CheckBy { get; set; }
     }
 }

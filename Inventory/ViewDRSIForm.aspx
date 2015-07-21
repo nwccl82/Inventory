@@ -19,7 +19,9 @@
             <td>
                 <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                     DataKeyNames="id" EnableModelValidation="True" ForeColor="#333333" GridLines="None"
-                    OnSelectedIndexChanged="GridView_SelectedIndexChanged" OnRowCommand="GridView_RowCommand">
+                    OnSelectedIndexChanged="GridView_SelectedIndexChanged" 
+                    OnRowCommand="GridView_RowCommand" AllowPaging="True" 
+                    onpageindexchanging="GridView1_PageIndexChanging">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
@@ -35,6 +37,9 @@
                         <asp:BoundField DataField="TotalWeight" HeaderText="TotalWeight" />
                         <asp:BoundField DataField="TotalUnitCost" HeaderText="TotalUnitCost" />
                         <asp:BoundField DataField="TotalCost" HeaderText="TotalCost" />
+                        <asp:BoundField DataField="OrderDate" HeaderText="OrderDate" />
+                        <asp:BoundField DataField="OrderBy" HeaderText="OrderBy" />
+                        <asp:BoundField DataField="CheckBy" HeaderText="CheckBy" />
                         <%-- <asp:BoundField DataField="cellphoneNo" HeaderText="CellPhone No" />
             <asp:BoundField DataField="email" HeaderText="Email" />
             <asp:BoundField DataField="position" HeaderText="Position" />--%>

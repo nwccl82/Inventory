@@ -64,6 +64,7 @@
             </td>
         </tr>
     </table>
-    <asp:GridView ID="GridView1" runat="server">
+    <asp:GridView ID="GridView1" runat="server" AllowPaging="True" 
+        onpageindexchanging="GridView1_PageIndexChanging">
     </asp:GridView>
 </asp:Content>

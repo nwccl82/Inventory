@@ -113,5 +113,15 @@ namespace Inventory
         {
 
         }
+
+        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
+        {
+            busSupplier bussup = new busSupplier();
+            this.GridView1.PageIndex = e.NewPageIndex;
+            DataTable dt = new DataTable("User");
+            dt = bussup.allSupplier();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+        }
     }
 }

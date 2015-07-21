@@ -178,6 +178,7 @@ namespace Inventory
         protected void btnSave_Click(object sender, EventArgs e)
         {
             dtgridList = (DataTable)ViewState["dtgridList"];
+            string users = Session["id"].ToString();
             FrameWork.DRSIForm drsi = new FrameWork.DRSIForm();
             FrameWork.DRSISub drsisub = new DRSISub();
             busDISRForm busDISR = new busDISRForm();
@@ -188,6 +189,7 @@ namespace Inventory
             drsi.TotalWeight = lblWeight.Text;
             drsi.TotalUnitCost = txtCost.Text;
             drsi.TotalCost = lblTCost.Text;
+            drsi.OrderBy = users;
             string x = busDISR.insertDRSI(drsi);
             foreach (DataRow dr in dtgridList.Rows)
             {

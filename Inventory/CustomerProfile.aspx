@@ -111,7 +111,9 @@
          <label><asp:Button ID="btnSave" CssClass="simpleshape1" runat="server" Text="Save" OnClick="btnSave_Click" /></label>
        <asp:GridView ID="GridView1" runat="server" AutoGenerateColumns="False" CellPadding="4"
                     DataKeyNames="id" EnableModelValidation="True" ForeColor="#333333" GridLines="None"
-                    OnSelectedIndexChanged="GridView1_SelectedIndexChanged" OnRowCommand="GridView1_RowCommand">
+                    OnSelectedIndexChanged="GridView1_SelectedIndexChanged" 
+             OnRowCommand="GridView1_RowCommand" AllowPaging="True" 
+             onpageindexchanging="GridView1_PageIndexChanging">
                     <AlternatingRowStyle BackColor="White" />
                     <Columns>
                         <asp:CommandField ShowSelectButton="True" />
