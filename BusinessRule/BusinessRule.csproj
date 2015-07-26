@@ -46,6 +46,7 @@
     <Compile Include="busDISRForm.cs" />
     <Compile Include="busEmployees.cs" />
     <Compile Include="busProducts.cs" />
+    <Compile Include="busPurchaseOrder.cs" />
     <Compile Include="busSizes.cs" />
     <Compile Include="busSupplier.cs" />
     <Compile Include="busUnitOfMeasure.cs" />

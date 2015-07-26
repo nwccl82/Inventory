@@ -7,10 +7,6 @@ C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\bin\Debug\FrameWork.dl
 C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\bin\Debug\FrameWork.pdb
 C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\obj\Debug\FrameWork.dll
 C:\Users\nlapitan\Downloads\Inventory\Inventory\FrameWork\obj\Debug\FrameWork.pdb
-J:\Inventory\FrameWork\bin\Debug\FrameWork.dll
-J:\Inventory\FrameWork\bin\Debug\FrameWork.pdb
-J:\Inventory\FrameWork\obj\Debug\FrameWork.dll
-J:\Inventory\FrameWork\obj\Debug\FrameWork.pdb
 G:\Inventory\FrameWork\bin\Debug\FrameWork.dll
 G:\Inventory\FrameWork\bin\Debug\FrameWork.pdb
 G:\Inventory\FrameWork\obj\Debug\FrameWork.dll
@@ -21,4 +17,7 @@ C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.csprojRes
 C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.dll
 C:\Users\neil\Documents\GitHub\Inventory\FrameWork\obj\Debug\FrameWork.pdb
 G:\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
-J:\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
+J:\Inventory\FrameWork\bin\Debug\FrameWork.dll
+J:\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+J:\Inventory\FrameWork\obj\Debug\FrameWork.dll
+J:\Inventory\FrameWork\obj\Debug\FrameWork.pdb

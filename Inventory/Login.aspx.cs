@@ -23,7 +23,7 @@ namespace Inventory
             frmEmp = lst.Retrieve1(userid, pass);
             if (frmEmp != null)
             {
-                Session["id"] = frmEmp.Login;
+                Session["id"] = frmEmp.ID;
                 Session["user"] = frmEmp.Login;
                 //   Session["position"] = frmLogin.position;
                 //Server.Transfer("adduser.aspx");
