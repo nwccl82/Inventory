@@ -101,3 +101,5 @@ J:\Inventory\Inventory\obj\Debug\RdlCompile.cache
 J:\Inventory\Inventory\obj\Debug\RdlCompile.compiled
 J:\Inventory\Inventory\obj\Debug\Inventory.dll
 J:\Inventory\Inventory\obj\Debug\Inventory.pdb
+G:\Inventory\Inventory\obj\Debug\RdlCompile.cache
+G:\Inventory\Inventory\obj\Debug\RdlCompile.compiled

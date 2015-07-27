@@ -47,9 +47,6 @@
       <HintPath>bin\Library.dll</HintPath>
     </Reference>
     <Reference Include="Microsoft.CSharp" />
-    <Reference Include="Microsoft.ReportViewer.WebForms, Version=10.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a, processorArchitecture=MSIL">
-      <SpecificVersion>False</SpecificVersion>
-    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Core" />
@@ -80,12 +77,8 @@
     <Content Include="images\Calendar_scheduleHS.png" />
     <Content Include="Login.aspx" />
     <Content Include="Logout.aspx" />
-    <Content Include="ProductRequestOrderForm.aspx" />
     <Content Include="Products.aspx" />
-    <Content Include="PuchaseOrderForm.aspx" />
-    <Content Include="ReceiveOrderForm.aspx" />
     <Content Include="ReportAspx.aspx" />
-    <Content Include="Reps.aspx" />
     <Content Include="Sizes.aspx" />
     <Content Include="Styles\Site.css" />
     <Content Include="Default.aspx" />
@@ -208,13 +201,6 @@
     <Compile Include="Logout.aspx.designer.cs">
       <DependentUpon>Logout.aspx</DependentUpon>
     </Compile>
-    <Compile Include="ProductRequestOrderForm.aspx.cs">
-      <DependentUpon>ProductRequestOrderForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ProductRequestOrderForm.aspx.designer.cs">
-      <DependentUpon>ProductRequestOrderForm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="Products.aspx.cs">
       <DependentUpon>Products.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
@@ -228,33 +214,12 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
       <DependentUpon>Settings.settings</DependentUpon>
     </Compile>
-    <Compile Include="PuchaseOrderForm.aspx.cs">
-      <DependentUpon>PuchaseOrderForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="PuchaseOrderForm.aspx.designer.cs">
-      <DependentUpon>PuchaseOrderForm.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="ReceiveOrderForm.aspx.cs">
-      <DependentUpon>ReceiveOrderForm.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="ReceiveOrderForm.aspx.designer.cs">
-      <DependentUpon>ReceiveOrderForm.aspx</DependentUpon>
-    </Compile>
     <Compile Include="ReportAspx.aspx.cs">
       <DependentUpon>ReportAspx.aspx</DependentUpon>
       <SubType>ASPXCodeBehind</SubType>
     </Compile>
     <Compile Include="ReportAspx.aspx.designer.cs">
       <DependentUpon>ReportAspx.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Reps.aspx.cs">
-      <DependentUpon>Reps.aspx</DependentUpon>
-      <SubType>ASPXCodeBehind</SubType>
-    </Compile>
-    <Compile Include="Reps.aspx.designer.cs">
-      <DependentUpon>Reps.aspx</DependentUpon>
     </Compile>
     <Compile Include="Site.Master.cs">
       <DependentUpon>Site.Master</DependentUpon>
@@ -276,11 +241,6 @@
     </Compile>
     <Compile Include="SuppliersProfile.aspx.designer.cs">
       <DependentUpon>SuppliersProfile.aspx</DependentUpon>
-    </Compile>
-    <Compile Include="Test.Designer.cs">
-      <AutoGen>True</AutoGen>
-      <DesignTime>True</DesignTime>
-      <DependentUpon>Test.xsd</DependentUpon>
     </Compile>
     <Compile Include="UnitOfMeasures.aspx.cs">
       <DependentUpon>UnitOfMeasures.aspx</DependentUpon>
@@ -319,17 +279,6 @@
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
-    <None Include="Test.xsc">
-      <DependentUpon>Test.xsd</DependentUpon>
-    </None>
-    <None Include="Test.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>Test.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="Test.xss">
-      <DependentUpon>Test.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
@@ -339,8 +288,6 @@
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>Cr1.cs</LastGenOutput>
     </EmbeddedResource>
-    <EmbeddedResource Include="Report1.rdlc" />
-    <EmbeddedResource Include="Report2.rdlc" />
   </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" />

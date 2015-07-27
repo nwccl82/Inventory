@@ -11,7 +11,6 @@ G:\Inventory\DataAccess\bin\Debug\DataAccess.dll
 G:\Inventory\DataAccess\bin\Debug\DataAccess.pdb
 G:\Inventory\DataAccess\obj\Debug\DataAccess.dll
 G:\Inventory\DataAccess\obj\Debug\DataAccess.pdb
-G:\Inventory\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\bin\Debug\DataAccess.dll
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache

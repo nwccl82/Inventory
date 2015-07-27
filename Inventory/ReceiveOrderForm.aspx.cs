@@ -10,7 +10,7 @@ using BusinessRule;
 
 namespace Inventory
 {
-    public partial class PuchaseOrderForm : System.Web.UI.Page
+    public partial class ReceiveOrderForm : System.Web.UI.Page
     {
         DataTable dtgridList = new DataTable();
         protected void Page_Load(object sender, EventArgs e)
@@ -41,40 +41,17 @@ namespace Inventory
             }
         }
 
-        protected void drpSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        protected void btnAdd_Click(object sender, EventArgs e)
         {
-            DataTable dt = (DataTable)ViewState["Supplier"];
-            DataRow[] foundRows;
-            string selectValue = "ID = " + this.drpSupplier.SelectedValue;
-            string sortOrder = "ID ASC";
-            foundRows = dt.Select(selectValue, sortOrder);
-            for (int i = 0; i < foundRows.Length; i++)
-                Console.WriteLine(foundRows[i][2]);
-            if (foundRows != null)
+            if (this.txtQuantity.Text.Trim() == string.Empty)
             {
-                this.lblAddress.Text = foundRows[0]["Address"].ToString();
-                this.lblTin.Text = foundRows[0]["TIN"].ToString();
-                //this.lblEmail.Text = foundRows[0]["EmailAddress"].ToString();
-                this.lbltel.Text = foundRows[0]["BusinessPhone"].ToString();
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please enter quantity ')", true);
+            }
+            else
+            {
+                BindStudent();
             }
         }
-
-        protected void drpProduct_SelectedIndexChanged(object sender, EventArgs e)
-        {
-            DataTable dt = (DataTable)ViewState["Products"];
-            DataRow[] foundRows;
-            string selectValue = "ID = " + this.drpProduct.SelectedValue;
-            string sortOrder = "ID ASC";
-            foundRows = dt.Select(selectValue, sortOrder);
-            for (int i = 0; i < foundRows.Length; i++)
-                Console.WriteLine(foundRows[i][2]);
-            if (foundRows != null)
-            {
-                this.lblDescription.Text = foundRows[0]["Description"].ToString();
-
-            }
-        }
-
         private void BindStudent()
         {
             DataRow dr;
@@ -85,8 +62,8 @@ namespace Inventory
                 AddColumn("UnitOfMeasure", "UnitOfMeasure", grdList);
                 AddColumn("ProductID", "ProductID", grdList);
                 AddColumn("ItemDescription", "ItemDescription", grdList);
-                AddColumn("UnitPrice", "UnitPrice", grdList);
-                AddColumn("Amount", "Amount", grdList);
+                //AddColumn("UnitPrice", "UnitPrice", grdList);
+                //AddColumn("Amount", "Amount", grdList);
                 AddColumnButtonField("cmdDelete", " ", "Delete", grdList);
 
 
@@ -94,8 +71,8 @@ namespace Inventory
                 dtgridList.Columns.Add("UnitOfMeasure");
                 dtgridList.Columns.Add("ProductID");
                 dtgridList.Columns.Add("ItemDescription");
-                dtgridList.Columns.Add("UnitPrice");
-                dtgridList.Columns.Add("Amount");
+                //dtgridList.Columns.Add("UnitPrice");
+                //dtgridList.Columns.Add("Amount");
 
                 dtgridList.Columns.Add("cmdDelete");
             }
@@ -107,17 +84,17 @@ namespace Inventory
             double quantity = 0;
             double total = 0;
 
-            unitprices = double.Parse(this.txtUnitPrice.Text);
-            quantity = double.Parse(this.txtQuantity.Text);
-            total = unitprices * quantity;
+            //unitprices = double.Parse(this.txtUnitPrice.Text);
+            //quantity = double.Parse(this.txtQuantity.Text);
+            //total = unitprices * quantity;
 
             dr = dtgridList.NewRow();
             dr["Quantity"] = this.txtQuantity.Text;
             dr["UnitOfMeasure"] = this.txtUOM.Text;
             dr["ProductID"] = this.drpProduct.SelectedValue;
             dr["ItemDescription"] = this.lblDescription.Text;
-            dr["UnitPrice"] = this.txtUnitPrice.Text;
-            dr["Amount"] = total;
+            //dr["UnitPrice"] = this.txtUnitPrice.Text;
+            //dr["Amount"] = total;
             dr["CmdDelete"] = "Delete";
             dtgridList.Rows.Add(dr);
 
@@ -146,9 +123,83 @@ namespace Inventory
             gv.Columns.Add(Col);
         }
 
-        protected void grdList_RowDeleting(object sender, GridViewDeleteEventArgs e)
+        protected void drpProduct_SelectedIndexChanged(object sender, EventArgs e)
         {
+            DataTable dt = (DataTable)ViewState["Products"];
+            DataRow[] foundRows;
+            string selectValue = "ID = " + this.drpProduct.SelectedValue;
+            string sortOrder = "ID ASC";
+            foundRows = dt.Select(selectValue, sortOrder);
+            for (int i = 0; i < foundRows.Length; i++)
+                Console.WriteLine(foundRows[i][2]);
+            if (foundRows != null)
+            {
+                this.lblDescription.Text = foundRows[0]["Description"].ToString();
 
+            }
+        }
+
+        protected void drpSupplier_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            DataTable dt = (DataTable)ViewState["Supplier"];
+            DataRow[] foundRows;
+            string selectValue = "ID = " + this.drpSupplier.SelectedValue;
+            string sortOrder = "ID ASC";
+            foundRows = dt.Select(selectValue, sortOrder);
+            for (int i = 0; i < foundRows.Length; i++)
+                Console.WriteLine(foundRows[i][2]);
+            if (foundRows != null)
+            {
+                this.lblAddress.Text = foundRows[0]["Address"].ToString();
+                this.lblTin.Text = foundRows[0]["TIN"].ToString();
+                //this.lblEmail.Text = foundRows[0]["EmailAddress"].ToString();
+                this.lbltel.Text = foundRows[0]["BusinessPhone"].ToString();
+            }
+        }
+
+        protected void btnSave_Click(object sender, EventArgs e)
+        {
+            dtgridList = (DataTable)ViewState["dtgridList"];
+            string users = Session["id"].ToString();
+            decimal totalamt = 0;
+            try
+            {
+
+                FrameWork.ReceiveOrders RRO = new FrameWork.ReceiveOrders();
+                FrameWork.ReceiveOrderDetails PROsub = new ReceiveOrderDetails();
+                busReceiveOrders busPRO = new busReceiveOrders();
+                RRO.SupplierID = int.Parse(this.drpSupplier.SelectedValue);
+                RRO.CreatedById = int.Parse(users);
+
+                string x = busPRO.insertRR(RRO);
+                foreach (DataRow dr in dtgridList.Rows)
+                {
+                    PROsub.ReceiveOrderID = int.Parse(x);
+                    PROsub.Quantity = Single.Parse(dr["Quantity"].ToString());
+                    
+                    PROsub.ProductID = int.Parse(dr["ProductID"].ToString());
+
+                    busPRO.insertReceiveOrderDetails(PROsub);
+                }
+            }
+            catch (Exception ex)
+            {
+
+            }
+            finally
+            {
+                this.txtQuantity.Text = string.Empty;
+                this.txtUOM.Text = string.Empty;
+                this.drpProduct.SelectedValue = "0";
+                this.lblDescription.Text = string.Empty;
+                //this.txtUnitPrice.Text = string.Empty;
+                this.drpSupplier.SelectedValue = "0";
+                // this.txtTerms.Text = string.Empty;
+                DataTable ds = new DataTable();
+                ds = null;
+                this.grdList.DataSource = ds;
+                grdList.DataBind();
+            }
         }
 
         protected void grdList_RowCommand(object sender, GridViewCommandEventArgs e)
@@ -171,67 +222,11 @@ namespace Inventory
             }
         }
 
-        protected void btnAdd_Click(object sender, EventArgs e)
+        protected void grdList_RowDeleting(object sender, GridViewDeleteEventArgs e)
         {
-            if (this.txtUnitPrice.Text.Trim() == string.Empty && this.txtQuantity.Text.Trim() == string.Empty)
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Please enter unit price or quantity price')", true);
-            }
-            else
-            {
-                BindStudent();
-            }
+
         }
 
-        protected void btnSave_Click(object sender, EventArgs e)
-        {
-            dtgridList = (DataTable)ViewState["dtgridList"];
-            string users = Session["id"].ToString();
-            decimal totalamt = 0;
-            try
-            {
-                foreach (DataRow dr in dtgridList.Rows)
-                {
-                    totalamt = totalamt + decimal.Parse(dr["Amount"].ToString());
-                }
-                FrameWork.PurchaseOrders PRO = new FrameWork.PurchaseOrders();
-                FrameWork.PurchaseOrderDetails PROsub = new PurchaseOrderDetails();
-                busPurchaseOrder busPRO = new busPurchaseOrder();
-                PRO.SupplierID = int.Parse(this.drpSupplier.SelectedValue);
-                PRO.CreatedById = int.Parse(users);
-                PRO.ExpectedDate = DateTime.Parse(this.txtDateNeeded.Text);
-                PRO.PaymentAmount = totalamt;
 
-                string x = busPRO.insertPO(PRO);
-                foreach (DataRow dr in dtgridList.Rows)
-                {
-                    PROsub.PurchaseOrderID = int.Parse(x);
-                    PROsub.Quantity = Single.Parse(dr["Quantity"].ToString());
-                    PROsub.UnitCost = decimal.Parse(dr["UnitPrice"].ToString());
-                    PROsub.ProductID = int.Parse(dr["ProductID"].ToString());
-
-                    busPRO.insertPurchaseOrderDetails(PROsub);
-                }
-            }
-            catch (Exception ex)
-            {
-
-            }
-            finally
-            {
-                this.txtQuantity.Text = string.Empty;
-                this.txtUOM.Text = string.Empty;
-                this.drpProduct.SelectedValue = "0";
-                this.lblDescription.Text = string.Empty;
-                this.txtUnitPrice.Text = string.Empty;
-                this.drpSupplier.SelectedValue = "0";
-                this.txtTerms.Text = string.Empty;
-                DataTable ds = new DataTable();
-                ds = null;
-                this.grdList.DataSource = ds;
-                grdList.DataBind();
-            }
-
-        }
     }
 }
