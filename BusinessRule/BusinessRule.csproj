@@ -30,6 +30,26 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <DebugSymbols>true</DebugSymbols>
+    <OutputPath>bin\x86\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <DebugType>full</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Release|x86'">
+    <OutputPath>bin\x86\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <Optimize>true</Optimize>
+    <DebugType>pdbonly</DebugType>
+    <PlatformTarget>x86</PlatformTarget>
+    <ErrorReport>prompt</ErrorReport>
+    <CodeAnalysisIgnoreBuiltInRuleSets>true</CodeAnalysisIgnoreBuiltInRuleSets>
+    <CodeAnalysisIgnoreBuiltInRules>true</CodeAnalysisIgnoreBuiltInRules>
+  </PropertyGroup>
   <ItemGroup>
     <Reference Include="System" />
     <Reference Include="System.configuration" />
@@ -42,15 +62,22 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="busCategories.cs" />
+    <Compile Include="busColors.cs" />
     <Compile Include="busCustomer.cs" />
     <Compile Include="busDISRForm.cs" />
     <Compile Include="busEmployees.cs" />
+    <Compile Include="busLength.cs" />
+    <Compile Include="busProductRequestOrder.cs" />
     <Compile Include="busProducts.cs" />
     <Compile Include="busPurchaseOrder.cs" />
+    <Compile Include="busReceivedOrderFingerLings.cs" />
     <Compile Include="busReceiveOrders.cs" />
     <Compile Include="busSizes.cs" />
     <Compile Include="busSupplier.cs" />
+    <Compile Include="busThick.cs" />
+    <Compile Include="busThickOfFilm.cs" />
     <Compile Include="busUnitOfMeasure.cs" />
+    <Compile Include="busWidth.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>

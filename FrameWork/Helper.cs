@@ -38,7 +38,14 @@ namespace FrameWork
                     {
                         val = 0;
                     }
-                    val = double.Parse(val.ToString());
+                    if (typeof(Double) == col.DataType)
+                    {
+                        val = Double.Parse(val.ToString());
+                    }
+                    if (typeof(Decimal) == col.DataType)
+                    {
+                        val = Decimal.Parse(val.ToString());
+                    }
                 }
                 else if (typeof(DateTime) == col.DataType)
                 {

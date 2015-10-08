@@ -1,8 +1,3 @@
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\DataAccess\bin\Debug\DataAccess.dll
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\DataAccess\bin\Debug\DataAccess.pdb
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\DataAccess\obj\Debug\ResolveAssemblyReference.cache
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\DataAccess\obj\Debug\DataAccess.dll
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\DataAccess\obj\Debug\DataAccess.pdb
 C:\Users\nlapitan\Downloads\Inventory\Inventory\DataAccess\bin\Debug\DataAccess.dll
 C:\Users\nlapitan\Downloads\Inventory\Inventory\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\nlapitan\Downloads\Inventory\Inventory\DataAccess\obj\Debug\DataAccess.dll
@@ -16,7 +11,15 @@ C:\Users\neil\Documents\GitHub\Inventory\DataAccess\bin\Debug\DataAccess.pdb
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\obj\Debug\DataAccess.csprojResolveAssemblyReference.cache
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\obj\Debug\DataAccess.dll
 C:\Users\neil\Documents\GitHub\Inventory\DataAccess\obj\Debug\DataAccess.pdb
+I:\usb16\Inventory\DataAccess\bin\Debug\DataAccess.dll
+I:\usb16\Inventory\DataAccess\bin\Debug\DataAccess.pdb
+I:\usb16\Inventory\DataAccess\obj\Debug\DataAccess.dll
+I:\usb16\Inventory\DataAccess\obj\Debug\DataAccess.pdb
 J:\Inventory\DataAccess\bin\Debug\DataAccess.dll
 J:\Inventory\DataAccess\bin\Debug\DataAccess.pdb
 J:\Inventory\DataAccess\obj\Debug\DataAccess.dll
 J:\Inventory\DataAccess\obj\Debug\DataAccess.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\DataAccess\bin\Debug\DataAccess.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\DataAccess\bin\Debug\DataAccess.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\DataAccess\obj\Debug\DataAccess.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\DataAccess\obj\Debug\DataAccess.pdb

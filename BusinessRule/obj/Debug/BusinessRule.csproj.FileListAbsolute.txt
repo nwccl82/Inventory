@@ -1,8 +1,3 @@
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\BusinessRule\obj\Debug\ResolveAssemblyReference.cache
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\bin\Debug\DataAccess.dll
@@ -12,10 +7,6 @@ C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\bin\Debug\FrameWork
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
 C:\Users\nlapitan\Downloads\Inventory\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\DataAccess.dll
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\FrameWork.dll
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\DataAccess.pdb
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
 G:\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
 G:\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
 G:\Inventory\BusinessRule\bin\Debug\DataAccess.dll
@@ -34,6 +25,15 @@ C:\Users\neil\Documents\GitHub\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
 C:\Users\neil\Documents\GitHub\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
 C:\Users\neil\Documents\GitHub\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
 C:\Users\neil\Documents\GitHub\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
+I:\usb16\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
+I:\usb16\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
+I:\usb16\Inventory\BusinessRule\bin\Debug\DataAccess.dll
+I:\usb16\Inventory\BusinessRule\bin\Debug\FrameWork.dll
+I:\usb16\Inventory\BusinessRule\bin\Debug\DataAccess.pdb
+I:\usb16\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
+I:\usb16\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
+I:\usb16\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
+I:\usb16\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
 J:\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
 J:\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
 J:\Inventory\BusinessRule\bin\Debug\DataAccess.dll
@@ -43,3 +43,12 @@ J:\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
 J:\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
 J:\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
 J:\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\DataAccess.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\FrameWork.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\DataAccess.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
+C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb

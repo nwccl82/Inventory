@@ -55,8 +55,16 @@ namespace BusinessRule
             result = cmd.ExecuteNonQuery();
 
 
-            con.Close();
+            
+            cmd = new SqlCommand( "select ID from Products where ProductName='" + prods.ProductName + "'",con);
+            result = (int)cmd.ExecuteScalar();
+
+
+            cmd = new SqlCommand("INSERT INTO [Inventory]([ProductID],[ReorderLevel],[TargetLevel],[MinimumReorderQuantity],[Received],[OnOrder], [Shrinkage],[Shipped],[Allocated],[BackOrdered],[InitialLevel],[OnHand],[Available],[CurrentLevel] ,[BelowTargetLevel],[ReorderQuantity]) VALUES (@ProductID,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)", con);
+            cmd.Parameters.AddWithValue("@ProductID", result);
+            result = cmd.ExecuteNonQuery();
             return Message;
+            con.Close();
         }
     }
 }

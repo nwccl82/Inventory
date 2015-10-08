@@ -1,0 +1,8 @@
+G:\Inventory\DataAccess\bin\x86\Release\DataAccess.dll
+G:\Inventory\DataAccess\bin\x86\Release\DataAccess.pdb
+G:\Inventory\DataAccess\obj\x86\Release\DataAccess.dll
+G:\Inventory\DataAccess\obj\x86\Release\DataAccess.pdb
+I:\usb16\Inventory\DataAccess\bin\x86\Release\DataAccess.dll
+I:\usb16\Inventory\DataAccess\bin\x86\Release\DataAccess.pdb
+I:\usb16\Inventory\DataAccess\obj\x86\Release\DataAccess.dll
+I:\usb16\Inventory\DataAccess\obj\x86\Release\DataAccess.pdb

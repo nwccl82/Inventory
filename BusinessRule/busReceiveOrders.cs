@@ -20,6 +20,7 @@ namespace BusinessRule
 
             con.Open();
             SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].ReceiveOrders ([SupplierID],[CreatedById],[CreationDate],[IsCompleted],[IsSubmitted],[IsNew]) VALUES (@SupplierID,@CreatedById,getdate(),@IsCompleted,@IsSubmitted,@IsNew)", con);
+            cmd.CommandText = "InsertRR";
             cmd.Parameters.AddWithValue("@SupplierID", drsi.SupplierID);
             cmd.Parameters.AddWithValue("@CreatedById", drsi.CreatedById);
             //cmd.Parameters.AddWithValue("@ExpectedDate", drsi.ExpectedDate);
@@ -114,37 +115,39 @@ namespace BusinessRule
             return Message;
         }
 
-        public FrameWork.DRSIForm[] allPO()
+        public FrameWork.ReceiveOrders[] allPO()
         {
-            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]  FROM [inventory].[dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
+            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone]  FROM [inventory].[dbo].ReceiveOrders a inner join [inventory].[dbo].[Suppliers] b on a.SupplierID = b.ID order by a.id asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
-            FrameWork.DRSIForm[] dec = new FrameWork.DRSIForm[table.Rows.Count];
+            FrameWork.ReceiveOrders[] dec = new FrameWork.ReceiveOrders[table.Rows.Count];
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                dec[i] = new FrameWork.DRSIForm(table.Rows[i]);
+                dec[i] = new FrameWork.ReceiveOrders(table.Rows[i]);
             }
 
             return dec;
 
         }
-        public FrameWork.DRSISub[] allPurchaseOrderDetails(string ID)
+        public FrameWork.ReceiveOrderDetails[] allPurchaseOrderDetails(string ID)
         {
-            string query = "SELECT [ID] ,[DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]  FROM [inventory].[dbo].[DRSISub] where DRSiformID='" + ID + "'";
+            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [inventory].[dbo].[ReceiveOrderDetails] a inner join [inventory].[dbo].Products b on a.ProductID = b.ID  where ReceiveOrderID='" + ID + "' order by a.[ID] asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
-            FrameWork.DRSISub[] dec = new FrameWork.DRSISub[table.Rows.Count];
+            FrameWork.ReceiveOrderDetails[] dec = new FrameWork.ReceiveOrderDetails[table.Rows.Count];
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                dec[i] = new FrameWork.DRSISub(table.Rows[i]);
+                dec[i] = new FrameWork.ReceiveOrderDetails(table.Rows[i]);
             }
 
             return dec;
 
         }
+
+      
     }
 }

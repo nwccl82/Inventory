@@ -1,30 +1,41 @@
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\obj\Debug\Inventory.csprojResolveAssemblyReference.cache
 c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\Inventory.dll
 c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\Inventory.pdb
-c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\obj\Debug\ResolveAssemblyReference.cache
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\AjaxControlToolkit.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\BusinessRule.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\FrameWork.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\DataAccess.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\BusinessRule.pdb
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\FrameWork.pdb
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\AjaxControlToolkit.pdb
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\DataAccess.pdb
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\ar\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\cs\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\de\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\es\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\fr\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\he\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\hi\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\it\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\ja\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\ko\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\nl\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\pt\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\ru\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\tr-TR\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\zh-CHS\AjaxControlToolkit.resources.dll
+c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\bin\zh-CHT\AjaxControlToolkit.resources.dll
 c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\obj\Debug\Inventory.dll
 c:\users\neil\documents\visual studio 2010\Projects\Inventory\Inventory\obj\Debug\Inventory.pdb
-C:\Users\nlapitan\Downloads\Inventory\Inventory\Inventory\bin\Inventory.dll
-C:\Users\nlapitan\Downloads\Inventory\Inventory\Inventory\bin\Inventory.pdb
-C:\Users\nlapitan\Downloads\Inventory\Inventory\Inventory\obj\Debug\Inventory.dll
-C:\Users\nlapitan\Downloads\Inventory\Inventory\Inventory\obj\Debug\Inventory.pdb
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\BusinessRule.dll
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\FrameWork.dll
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\DataAccess.dll
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\BusinessRule.pdb
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\FrameWork.pdb
-C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\Inventory\bin\DataAccess.pdb
 G:\Inventory\Inventory\bin\Inventory.dll
 G:\Inventory\Inventory\bin\Inventory.pdb
 G:\Inventory\Inventory\bin\BusinessRule.dll
-G:\Inventory\Inventory\bin\DataAccess.dll
 G:\Inventory\Inventory\bin\FrameWork.dll
+G:\Inventory\Inventory\bin\DataAccess.dll
 G:\Inventory\Inventory\bin\BusinessRule.pdb
-G:\Inventory\Inventory\bin\DataAccess.pdb
 G:\Inventory\Inventory\bin\FrameWork.pdb
-G:\Inventory\Inventory\obj\Debug\Inventory.csprojResolveAssemblyReference.cache
-G:\Inventory\Inventory\obj\Debug\Inventory.dll
-G:\Inventory\Inventory\obj\Debug\Inventory.pdb
 G:\Inventory\Inventory\bin\AjaxControlToolkit.pdb
+G:\Inventory\Inventory\bin\DataAccess.pdb
 G:\Inventory\Inventory\bin\ar\AjaxControlToolkit.resources.dll
 G:\Inventory\Inventory\bin\cs\AjaxControlToolkit.resources.dll
 G:\Inventory\Inventory\bin\de\AjaxControlToolkit.resources.dll
@@ -41,65 +52,6 @@ G:\Inventory\Inventory\bin\ru\AjaxControlToolkit.resources.dll
 G:\Inventory\Inventory\bin\tr-TR\AjaxControlToolkit.resources.dll
 G:\Inventory\Inventory\bin\zh-CHS\AjaxControlToolkit.resources.dll
 G:\Inventory\Inventory\bin\zh-CHT\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\Inventory.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\Inventory.pdb
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\AjaxControlToolkit.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\BusinessRule.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\FrameWork.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\DataAccess.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\BusinessRule.pdb
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\FrameWork.pdb
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\AjaxControlToolkit.pdb
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\DataAccess.pdb
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\ar\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\cs\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\de\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\es\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\fr\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\he\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\hi\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\it\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\ja\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\ko\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\nl\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\pt\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\ru\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\tr-TR\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\zh-CHS\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\bin\zh-CHT\AjaxControlToolkit.resources.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\obj\Debug\Inventory.csprojResolveAssemblyReference.cache
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\obj\Debug\Inventory.dll
-C:\Users\neil\Documents\GitHub\Inventory\Inventory\obj\Debug\Inventory.pdb
-J:\Inventory\Inventory\bin\Inventory.dll
-J:\Inventory\Inventory\bin\Inventory.pdb
-J:\Inventory\Inventory\bin\AjaxControlToolkit.dll
-J:\Inventory\Inventory\bin\BusinessRule.dll
-J:\Inventory\Inventory\bin\FrameWork.dll
-J:\Inventory\Inventory\bin\DataAccess.dll
-J:\Inventory\Inventory\bin\BusinessRule.pdb
-J:\Inventory\Inventory\bin\FrameWork.pdb
-J:\Inventory\Inventory\bin\AjaxControlToolkit.pdb
-J:\Inventory\Inventory\bin\DataAccess.pdb
-J:\Inventory\Inventory\bin\ar\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\cs\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\de\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\es\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\fr\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\he\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\hi\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\it\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\ja\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\ko\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\nl\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\pt\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\ru\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\tr-TR\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\zh-CHS\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\bin\zh-CHT\AjaxControlToolkit.resources.dll
-J:\Inventory\Inventory\obj\Debug\Inventory.csprojResolveAssemblyReference.cache
-J:\Inventory\Inventory\obj\Debug\RdlCompile.cache
-J:\Inventory\Inventory\obj\Debug\RdlCompile.compiled
-J:\Inventory\Inventory\obj\Debug\Inventory.dll
-J:\Inventory\Inventory\obj\Debug\Inventory.pdb
-G:\Inventory\Inventory\obj\Debug\RdlCompile.cache
-G:\Inventory\Inventory\obj\Debug\RdlCompile.compiled
+G:\Inventory\Inventory\obj\Debug\Inventory.csprojResolveAssemblyReference.cache
+G:\Inventory\Inventory\obj\Debug\Inventory.dll
+G:\Inventory\Inventory\obj\Debug\Inventory.pdb

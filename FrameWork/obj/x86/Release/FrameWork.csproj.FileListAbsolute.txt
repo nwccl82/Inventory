@@ -1,0 +1,8 @@
+G:\Inventory\FrameWork\bin\x86\Release\FrameWork.dll
+G:\Inventory\FrameWork\bin\x86\Release\FrameWork.pdb
+G:\Inventory\FrameWork\obj\x86\Release\FrameWork.dll
+G:\Inventory\FrameWork\obj\x86\Release\FrameWork.pdb
+I:\usb16\Inventory\FrameWork\bin\x86\Release\FrameWork.dll
+I:\usb16\Inventory\FrameWork\bin\x86\Release\FrameWork.pdb
+I:\usb16\Inventory\FrameWork\obj\x86\Release\FrameWork.dll
+I:\usb16\Inventory\FrameWork\obj\x86\Release\FrameWork.pdb

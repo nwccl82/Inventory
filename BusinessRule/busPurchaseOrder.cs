@@ -115,33 +115,33 @@ namespace BusinessRule
             return Message;
         }
 
-        public FrameWork.DRSIForm[] allPO()
+        public FrameWork.PurchaseOrders[] allPO()
         {
-            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]  FROM [inventory].[dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
+            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone], c.FullName  FROM [inventory].[dbo].PurchaseOrders a inner join [inventory].[dbo].[Suppliers] b on a.SupplierID = b.ID inner join [inventory].[dbo].Employees c on a.CreatedById = c.id order by a.id asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
-            FrameWork.DRSIForm[] dec = new FrameWork.DRSIForm[table.Rows.Count];
+            FrameWork.PurchaseOrders[] dec = new FrameWork.PurchaseOrders[table.Rows.Count];
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                dec[i] = new FrameWork.DRSIForm(table.Rows[i]);
+                dec[i] = new FrameWork.PurchaseOrders(table.Rows[i]);
             }
 
             return dec;
 
         }
-        public FrameWork.DRSISub[] allPurchaseOrderDetails(string ID)
+        public FrameWork.PurchaseOrderDetails[] allPurchaseOrderDetails(string ID)
         {
-            string query = "SELECT [ID] ,[DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]  FROM [inventory].[dbo].[DRSISub] where DRSiformID='" + ID + "'";
+            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [inventory].[dbo].[PurchaseOrderDetails] a inner join [inventory].[dbo].Products b on a.ProductID = b.ID  where PurchaseOrderID='" + ID + "' order by a.[ID] asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
-            FrameWork.DRSISub[] dec = new FrameWork.DRSISub[table.Rows.Count];
+            FrameWork.PurchaseOrderDetails[] dec = new FrameWork.PurchaseOrderDetails[table.Rows.Count];
 
             for (int i = 0; i < table.Rows.Count; i++)
             {
-                dec[i] = new FrameWork.DRSISub(table.Rows[i]);
+                dec[i] = new FrameWork.PurchaseOrderDetails(table.Rows[i]);
             }
 
             return dec;

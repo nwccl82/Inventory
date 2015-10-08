@@ -8,9 +8,9 @@ using System.Runtime.InteropServices;
 [assembly: AssemblyTitle("Inventory")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyCompany("Microsoft")]
+[assembly: AssemblyCompany("")]
 [assembly: AssemblyProduct("Inventory")]
-[assembly: AssemblyCopyright("Copyright © Microsoft 2015")]
+[assembly: AssemblyCopyright("Copyright ©  2015")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("35311f40-fa1c-44f5-a4b1-b77c251a7ad5")]
+[assembly: Guid("e428d3ab-0e0d-4d2c-a5a8-6a0a2e449539")]
 
 // Version information for an assembly consists of the following four values:
 //

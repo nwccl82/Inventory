@@ -1,11 +1,13 @@
 ﻿<%@ Page Title="Daily Monitoring" Language="C#" MasterPageFile="~/Site.Master" AutoEventWireup="true"
     CodeBehind="DailyMonitoring.aspx.cs" Inherits="Inventory.DailyMonitoring" %>
+
 <%@ Register Assembly="AjaxControlToolkit" Namespace="AjaxControlToolkit" TagPrefix="asp" %>
 
 <asp:Content ID="Content1" ContentPlaceHolderID="HeadContent" runat="server">
 </asp:Content>
 <asp:Content ID="Content2" ContentPlaceHolderID="MainContent" runat="server">
-    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server"/>
+    <asp:ToolkitScriptManager ID="ToolkitScriptManager1" runat="server">
+    </asp:ToolkitScriptManager>
     <table>
         <tr>
             <td>

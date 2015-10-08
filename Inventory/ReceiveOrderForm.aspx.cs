@@ -96,8 +96,10 @@ namespace Inventory
             //dr["UnitPrice"] = this.txtUnitPrice.Text;
             //dr["Amount"] = total;
             dr["CmdDelete"] = "Delete";
-            dtgridList.Rows.Add(dr);
-
+            if (this.txtQuantity.Text != string.Empty)
+            {
+                dtgridList.Rows.Add(dr);
+            }
             ViewState["dtgridList"] = dtgridList;
             grdList.DataSource = dtgridList;
             //grdList.Columns[1].Visible = false;
@@ -154,6 +156,17 @@ namespace Inventory
                 this.lblTin.Text = foundRows[0]["TIN"].ToString();
                 //this.lblEmail.Text = foundRows[0]["EmailAddress"].ToString();
                 this.lbltel.Text = foundRows[0]["BusinessPhone"].ToString();
+                FrameWork.PurchaseOrders[] dt1;
+                busPurchaseOrder buspurchase = new busPurchaseOrder();
+                this.drpPurchase.Items.Clear();
+                this.drpPurchase.Items.Add(new ListItem("select one", "0"));
+                dt1 = buspurchase.allPO();
+                
+                 var x = dt1.Where(a => a.SupplierID == int.Parse(this.drpSupplier.SelectedValue)).Select(a=> a.ID);
+                 foreach (var dec in x)
+                 {
+                     this.drpPurchase.Items.Add(new ListItem(dec.ToString(), dec.ToString()));
+                 }
             }
         }
 
@@ -176,7 +189,7 @@ namespace Inventory
                 {
                     PROsub.ReceiveOrderID = int.Parse(x);
                     PROsub.Quantity = Single.Parse(dr["Quantity"].ToString());
-                    
+
                     PROsub.ProductID = int.Parse(dr["ProductID"].ToString());
 
                     busPRO.insertReceiveOrderDetails(PROsub);
@@ -227,6 +240,32 @@ namespace Inventory
 
         }
 
+        protected void drpPurchase_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            busPurchaseOrder ReceiveOrder = new busPurchaseOrder();
+            FrameWork.PurchaseOrderDetails[] frmDRSI;
+            frmDRSI = ReceiveOrder.allPurchaseOrderDetails(this.drpPurchase.SelectedValue);
+            BindStudent();
+           foreach(FrameWork.PurchaseOrderDetails x in frmDRSI)
+           {
+               DataRow dr;
+               dr = dtgridList.NewRow();
+               dr["Quantity"] = x.Quantity.ToString();
+               dr["UnitOfMeasure"] = string.Empty;
+               dr["ProductID"] =x.ProductID.ToString();
+               dr["ItemDescription"] = string.Empty;
+               //dr["UnitPrice"] = this.txtUnitPrice.Text;
+               //dr["Amount"] = total;
+               dr["CmdDelete"] = "Delete";
+               dtgridList.Rows.Add(dr);
+
+               ViewState["dtgridList"] = dtgridList;
+               grdList.DataSource = dtgridList;
+
+               grdList.DataBind();
+           }
+        }
+     
 
     }
 }

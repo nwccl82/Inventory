@@ -13,6 +13,7 @@ namespace FrameWork
         }
         public ReceiveOrders() { }
         public Int32 ID { get; set; }
+        public int PurchaseOrderID { get; set; }
 
         public DateTime? OrderDate { get; set; }
 

@@ -199,7 +199,15 @@ namespace Inventory
                 busPurchaseOrder busPRO = new busPurchaseOrder();
                 PRO.SupplierID = int.Parse(this.drpSupplier.SelectedValue);
                 PRO.CreatedById = int.Parse(users);
-                PRO.ExpectedDate = DateTime.Parse(this.txtDateNeeded.Text);
+                if (this.txtDateNeeded.Text.Trim() != string.Empty)
+                {
+                    PRO.ExpectedDate = DateTime.Parse(this.txtDateNeeded.Text);
+                }
+                else
+                {
+                    PRO.ExpectedDate = DateTime.Parse("01/01/1900");
+                }
+
                 PRO.PaymentAmount = totalamt;
 
                 string x = busPRO.insertPO(PRO);

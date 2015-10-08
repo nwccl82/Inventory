@@ -13,6 +13,15 @@ namespace Inventory {
     public partial class ProductRequestOrderForm {
         
         /// <summary>
+        /// ToolkitScriptManager1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.ToolkitScriptManager ToolkitScriptManager1;
+        
+        /// <summary>
         /// Label1 control.
         /// </summary>
         /// <remarks>
@@ -47,6 +56,24 @@ namespace Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtUOM;
+        
+        /// <summary>
+        /// Label7 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Label Label7;
+        
+        /// <summary>
+        /// txtUnitPrice control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.TextBox txtUnitPrice;
         
         /// <summary>
         /// Label3 control.
@@ -119,5 +146,50 @@ namespace Inventory {
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
         protected global::System.Web.UI.WebControls.TextBox txtDateNeeded;
+        
+        /// <summary>
+        /// ImageButton1 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.ImageButton ImageButton1;
+        
+        /// <summary>
+        /// txtDOT_alendarExtender control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::AjaxControlToolkit.CalendarExtender txtDOT_alendarExtender;
+        
+        /// <summary>
+        /// btnAdd control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd;
+        
+        /// <summary>
+        /// btnSave control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnSave;
+        
+        /// <summary>
+        /// grdList control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.GridView grdList;
     }
 }

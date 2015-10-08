@@ -24,7 +24,9 @@
                 <asp:Label ID="Label8" runat="server" Text="PRO # :"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtPRO" runat="server"></asp:TextBox>
+                <asp:DropDownList ID="drpPurchase" runat="server" AutoPostBack="True" 
+                    onselectedindexchanged="drpPurchase_SelectedIndexChanged">
+                </asp:DropDownList>
             </td>
         </tr>
         <tr>

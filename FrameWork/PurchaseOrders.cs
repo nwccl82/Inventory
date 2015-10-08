@@ -12,6 +12,15 @@ namespace FrameWork
             Helper.CopyProperties(row, this);
         }
         public PurchaseOrders() { }
+        //supplier infos//
+        public String Company { get; set; }
+        public String TIN { get; set; }
+        public String Address { get; set; }
+        public String EmailAddress { get; set; }
+        public String BusinessPhone { get; set; }
+        //supplier infos//
+        public String FullName { get; set; }
+
         public Int32 ID { get; set; }
 
         public DateTime? OrderDate { get; set; }
