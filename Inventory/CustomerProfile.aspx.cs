@@ -13,6 +13,7 @@ namespace Inventory
 {
     public partial class CustomerProfile : System.Web.UI.Page
     {
+       
         protected void Page_Load(object sender, EventArgs e)
         {
             if (Session["user"] == null)
@@ -23,17 +24,7 @@ namespace Inventory
             {
                 BindCountry();
             }
-            if (!IsPostBack)
-            {
-                busCustomer buscust = new busCustomer();
-               
-                DataTable dt = new DataTable("User");
-                dt = buscust.allCustomer();
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-
-               
-            }
+ 
         }
         private void BindCountry()
         {
@@ -48,6 +39,13 @@ namespace Inventory
         }
         protected void btnSave_Click(object sender, EventArgs e)
         {
+            HiddenField1_ModalPopupExtender.Show();            
+        }
+
+        protected void BtnOk_Click(object sender, EventArgs e)
+        {
+       
+         
             FrameWork.Customers cust = new FrameWork.Customers();
             cust.Company = txtCompanyName.Text;
             cust.Address = txtNo.Text + " " + txtStreet.Text + " " + ddlCountry.SelectedValue + " " + txtZipCode.Text;
@@ -61,35 +59,30 @@ namespace Inventory
             cust.ZipPostal = txtZipCode.Text;
             cust.WebPage = txtWebsite.Text;
             BusinessRule.busCustomer custs = new BusinessRule.busCustomer();
-            custs.insertCustomer(cust);
+            string  x = custs.insertCustomer(cust);
 
-                busCustomer buscust = new busCustomer();
-               
-                DataTable dt = new DataTable("customer");
-                dt = buscust.allCustomer();
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-            
-        }
+            if (x.Trim() == string.Empty)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully added new Customer')", true);
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Failed to added new Customer')", true);
+            }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
-        {
 
-        }
-
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
             busCustomer buscust = new busCustomer();
-            this.GridView1.PageIndex = e.NewPageIndex;
-            DataTable dt = new DataTable("User");
+            DataTable dt = new DataTable("customer");
             dt = buscust.allCustomer();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
         }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+
+        }
+
+   
     }
 }

@@ -23,17 +23,7 @@ namespace Inventory
             {
                 BindCountry();
             }
-            if (!IsPostBack)
-            {
-                busSupplier bussup = new busSupplier();
 
-                DataTable dt = new DataTable("User");
-                dt = bussup.allSupplier();
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
-
-
-            }
         }
         private void BindCountry()
         {
@@ -47,6 +37,11 @@ namespace Inventory
         }
 
         protected void btnSave_Click(object sender, EventArgs e)
+        {
+            HiddenField1_ModalPopupExtender.Show();
+        }
+
+        protected void BtnOk_Click(object sender, EventArgs e)
         {
             ////Hashtable htParameters = new Hashtable();
 
@@ -79,49 +74,44 @@ namespace Inventory
             supp.WebPage = txtWebsite.Text;
 
             BusinessRule.busSupplier supps = new BusinessRule.busSupplier();
-            supps.insertSupplier(supp);
+
+            string x = supps.insertSupplier(supp);
+
+            if (x.Trim() == string.Empty)
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully added new Supplier')", true);
+            }
+            else
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Failed to added new Supplier')", true);
+            }
 
             busSupplier bussup = new busSupplier();
 
             DataTable dt = new DataTable("User");
-            dt = bussup.allSupplier();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            //dt = bussup.allSupplier();
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
 
             //MainClass.Library.Command.Execute(htParameters, "SupplierMod");
 
 
-                //,City 
-                //,StateProvince 
-                //,ZipPostal
-                //,CountryRegion
-                //,WebPage
-                //,Notes 
-                //,Attachments
-                //,SupplierName 
-                //,FileAs
-            
-
+            //,City 
+            //,StateProvince 
+            //,ZipPostal
+            //,CountryRegion
+            //,WebPage
+            //,Notes 
+            //,Attachments
+            //,SupplierName 
+            //,FileAs
         }
 
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
 
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
 
-        }
-
-        protected void GridView1_PageIndexChanging(object sender, GridViewPageEventArgs e)
-        {
-            busSupplier bussup = new busSupplier();
-            this.GridView1.PageIndex = e.NewPageIndex;
-            DataTable dt = new DataTable("User");
-            dt = bussup.allSupplier();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-        }
     }
 }

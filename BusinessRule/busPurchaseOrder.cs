@@ -20,7 +20,7 @@ namespace BusinessRule
             SqlTransaction transaction;
             
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].PurchaseOrders ([SupplierID],[CreatedById],[CreationDate],[ExpectedDate],[PaymentAmount],[IsCompleted],[IsSubmitted],[IsNew]) VALUES (@SupplierID,@CreatedById,getdate(),@ExpectedDate,@PaymentAmount,@IsCompleted,@IsSubmitted,@IsNew)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].PurchaseOrders ([SupplierID],[CreatedById],[CreationDate],[ExpectedDate],[PaymentAmount],[IsCompleted],[IsSubmitted],[IsNew]) VALUES (@SupplierID,@CreatedById,getdate(),@ExpectedDate,@PaymentAmount,@IsCompleted,@IsSubmitted,@IsNew)", con);
             cmd.Parameters.AddWithValue("@SupplierID", drsi.SupplierID);
             cmd.Parameters.AddWithValue("@CreatedById", drsi.CreatedById);
             cmd.Parameters.AddWithValue("@ExpectedDate", drsi.ExpectedDate);
@@ -71,7 +71,7 @@ namespace BusinessRule
             int result = 0;
             con.Open();
             SqlTransaction transaction;
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].PurchaseOrderDetails ([Quantity],[UnitCost],[PurchaseOrderID],[ProductID],[IsSubmitted],[PostedToInventory]) VALUES (@Quantity,@UnitCost,@PurchaseOrderID,@ProductID,@IsSubmitted,@PostedToInventory)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].PurchaseOrderDetails ([Quantity],[UnitCost],[PurchaseOrderID],[ProductID],[IsSubmitted],[PostedToInventory]) VALUES (@Quantity,@UnitCost,@PurchaseOrderID,@ProductID,@IsSubmitted,@PostedToInventory)", con);
             cmd.Parameters.AddWithValue("@Quantity", drsi.Quantity);
             cmd.Parameters.AddWithValue("@UnitCost", drsi.UnitCost);
             cmd.Parameters.AddWithValue("@PurchaseOrderID", drsi.PurchaseOrderID);
@@ -117,7 +117,7 @@ namespace BusinessRule
 
         public FrameWork.PurchaseOrders[] allPO()
         {
-            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone], c.FullName  FROM [inventory].[dbo].PurchaseOrders a inner join [inventory].[dbo].[Suppliers] b on a.SupplierID = b.ID inner join [inventory].[dbo].Employees c on a.CreatedById = c.id order by a.id asc";
+            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone], c.FullName  FROM [dbo].PurchaseOrders a inner join [dbo].[Suppliers] b on a.SupplierID = b.ID inner join [dbo].Employees c on a.CreatedById = c.id order by a.id asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
@@ -133,7 +133,7 @@ namespace BusinessRule
         }
         public FrameWork.PurchaseOrderDetails[] allPurchaseOrderDetails(string ID)
         {
-            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [inventory].[dbo].[PurchaseOrderDetails] a inner join [inventory].[dbo].Products b on a.ProductID = b.ID  where PurchaseOrderID='" + ID + "' order by a.[ID] asc";
+            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [dbo].[PurchaseOrderDetails] a inner join [dbo].Products b on a.ProductID = b.ID  where PurchaseOrderID='" + ID + "' order by a.[ID] asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);

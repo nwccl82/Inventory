@@ -20,7 +20,8 @@ namespace FrameWork
 
         public String Login { get; set; }
         public String passwords { get; set; }
-        public String LastName { get; set; } 
+        public String LastName { get; set; }
+        public int IDAccess { get; set; } 
 
     }
 }

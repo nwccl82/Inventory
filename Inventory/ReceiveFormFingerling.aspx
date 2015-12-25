@@ -128,7 +128,7 @@
                 <asp:Label ID="Label6" runat="server" Text="Date of Arrival"></asp:Label>
             </td>
             <td>
-                <asp:TextBox ID="txtDateShipment0" runat="server"></asp:TextBox>
+                <asp:TextBox ID="txtDateArrival" runat="server"></asp:TextBox>
             </td>
             <td>
                 <asp:Label ID="Label10" runat="server" Text="Time of Arrival"></asp:Label>
@@ -276,6 +276,7 @@
                 <asp:TextBox ID="txtTemperature" runat="server"></asp:TextBox>
             </td>
             <td>
+                <asp:Button ID="btnAdd0" runat="server" OnClick="btnAdd0_Click" Text="Add" />
             </td>
             <td>
             </td>
@@ -349,7 +350,7 @@
             <td>
             </td>
             <td>
-                <asp:Button ID="btnSave" runat="server" Text="Save" OnClick="btnSave_Click" />
+                <asp:Button ID="btnSave1" runat="server" Text="Save" OnClick="btnSave1_Click" />
             </td>
             <td>
             </td>

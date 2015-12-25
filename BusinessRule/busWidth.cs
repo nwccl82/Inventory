@@ -21,7 +21,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("Width");
             dt.Clear();
 
-            string query = "Select  [ID] ,[Widths]  FROM [inventory].[dbo].[Width]";
+            string query = "Select  [ID] ,[Widths]  FROM [dbo].[Width]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }

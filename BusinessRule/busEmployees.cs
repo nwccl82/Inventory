@@ -20,23 +20,36 @@ namespace BusinessRule
             string Message = string.Empty;
             int result = 0;
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [Employees]([Email] ,[FullName] ,[Login],passwords,LastName) VALUES (@Email,@FullName,@Login,@passwords,@LastName)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [Employees]([Email] ,[FullName] ,[Login],passwords,LastName,IDAccess) VALUES (@Email,@FullName,@Login,@passwords,@LastName,@IDAccess)", con);
             cmd.Parameters.AddWithValue("@Email", emp.Email);
             cmd.Parameters.AddWithValue("@FullName", emp.FullName);
             cmd.Parameters.AddWithValue("@Login", emp.Login);
             cmd.Parameters.AddWithValue("@passwords", emp.passwords);
             cmd.Parameters.AddWithValue("@LastName", emp.LastName);
+            cmd.Parameters.AddWithValue("@IDAccess", emp.IDAccess);
 
 
-            result = cmd.ExecuteNonQuery();
+            //result = cmd.ExecuteNonQuery();
+            try
+            {
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
+                Message = string.Empty;
+            }
 
-
-            con.Close();
+        
             return Message;
         }
         public FrameWork.Employees[] Retrieve()
         {
-            string query = "SELECT [ID] ,[Email],[FullName],[LastName],[Login]  FROM [inventory].[dbo].[Employees]";
+            string query = "SELECT [ID] ,[Email],[FullName],[LastName],[Login]  FROM [dbo].[Employees]";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
@@ -59,7 +72,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("Patients");
             dt.Clear();
 
-            string query = "Select  [ID] ,[Email],[FullName],[LastName],[Login]  FROM [inventory].[dbo].[Employees]";
+            string query = "Select  [ID] ,[Email],[FullName],[LastName],[Login]  FROM [dbo].[Employees]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }
@@ -80,7 +93,7 @@ namespace BusinessRule
 
         public FrameWork.Employees Retrieve1(string user, string pass)
         {
-            string query = "SELECT [ID] ,[Email],[FullName],[Login]  FROM [inventory].[dbo].[Employees] where login = '"+ user +"' and passwords ='"+ pass +"'";
+            string query = "SELECT [ID] ,[Email],[FullName],[Login]  FROM [dbo].[Employees] where login = '"+ user +"' and passwords ='"+ pass +"'";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);

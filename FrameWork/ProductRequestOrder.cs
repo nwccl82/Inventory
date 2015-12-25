@@ -13,7 +13,11 @@ namespace FrameWork
         } 
         public ProductRequestOrder() { }
         public Int32 ID { get; set; }
-
+        public String Company { get; set; }
+        public String TIN { get; set; }
+        public String Address { get; set; }
+        public String EmailAddress { get; set; }
+        public String BusinessPhone { get; set; }
         public DateTime? OrderDate { get; set; }
 
         public Int32? SupplierID { get; set; }

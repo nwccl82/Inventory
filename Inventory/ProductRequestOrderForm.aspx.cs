@@ -74,7 +74,6 @@ namespace Inventory
                 AddColumn("Amount", "Amount", grdList);
                 AddColumnButtonField("cmdDelete", " ", "Delete", grdList);
 
-
                 dtgridList.Columns.Add("Quantity");
                 dtgridList.Columns.Add("UnitOfMeasure");
                 dtgridList.Columns.Add("ProductID");
@@ -122,6 +121,7 @@ namespace Inventory
             DataControlField Col = Field;
             gv.Columns.Add(Col);
         }
+
         public void AddColumnButtonField(string DataField, string Header, string CommandName, GridView gv)
         {
             ButtonField Field = new ButtonField();
@@ -131,7 +131,6 @@ namespace Inventory
             DataControlField Col = Field;
             gv.Columns.Add(Col);
         }
-
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
@@ -156,7 +155,7 @@ namespace Inventory
                 string x = busPRO.insertProductRequestOrder(PRO);
                 foreach (DataRow dr in dtgridList.Rows)
                 {
-                    PROsub.PurchaseOrderID = int.Parse(x);
+                    PROsub.ProductRequestOrderID = int.Parse(x);
                     PROsub.Quantity = Single.Parse(dr["Quantity"].ToString());
                     PROsub.UnitCost = decimal.Parse(dr["UnitPrice"].ToString());
                     PROsub.ProductID = int.Parse(dr["ProductID"].ToString());

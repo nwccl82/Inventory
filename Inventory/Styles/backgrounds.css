@@ -1,0 +1,111 @@
+﻿body{
+padding: 0;
+margin: 0;
+background-color: #c2dafc;
+font: 11px Verdana, Arial, san-serif;
+color: #000000;
+}
+
+img{
+border: 0;
+}
+
+.header_right{
+	text-align: right;
+	font-weight: bold;
+	padding-right: 0;
+}
+
+#entireContent{
+width: 100%;
+background-color: #c2dafc;
+}
+
+.left_form_css
+{
+	vertical-align: top;
+	width: 20%;
+	/**background-color: #FFFBD6;**/
+	background-color: #cfe3fe;
+	padding-top: 10px;	
+}
+
+.form_css{
+width: 100%;
+}
+
+#form_header{
+	font-family: Verdana, Arial, san-serif;
+	font-weight:bold;
+	font-size: 12px;
+	color: Gray;
+	text-align:center;
+	width: 100%;
+	background-color:#eff1d6;
+	border: solid 1px #b1b874;
+	padding: 2px
+}
+
+.form_header2{
+	font-family: Verdana, Arial, san-serif;
+	font-weight:bold;
+	font-size: 10px;
+	color: Gray;
+	text-align:center;
+	width: 100%;
+	background-color:#eff1d6;
+	border: solid 1px #b1b874;
+	padding: 2px
+}
+
+.footer
+{
+	background-color: #eff1d6;
+	font-family: Verdana, Arial, san-serif;
+	/**font-weight:bold;**/
+	font-size: 10px;
+	text-align:center;
+	width: 100%;
+	padding: 5px;
+}
+
+.noline 
+{
+	text-decoration: none;
+	color:#76936a;
+	font-weight: bold;
+}
+
+.modalBackground {
+	background-color:Gray;
+	filter:alpha(opacity=70);
+	opacity:0.7;
+}
+
+.promptBackground
+{
+	background-color: #7b7e82;
+	font-weight: bold;
+	color: White;
+}
+.gridfonts
+{
+	font-family: Arial, san-serif;
+	font-size: 11px;	
+}
+.autocomplete_highlightedListItem
+{
+	
+	background-color: #c2dafc;
+	color: black;
+	padding: 1px;
+}
+
+
+.autocomplete_listItem 
+{
+	background-color : window;
+	color : windowtext;
+	padding : 1px;
+}
+

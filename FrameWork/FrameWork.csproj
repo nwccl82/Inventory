@@ -60,10 +60,12 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AccessLevels.cs" />
     <Compile Include="Categories.cs" />
     <Compile Include="Class1.cs" />
     <Compile Include="Color.cs" />
     <Compile Include="Customers.cs" />
+    <Compile Include="DailyMonitoring.cs" />
     <Compile Include="DRSIForm.cs" />
     <Compile Include="DRSISub.cs" />
     <Compile Include="Employees.cs" />
@@ -80,6 +82,7 @@
     <Compile Include="ProductRequestOrder.cs" />
     <Compile Include="ProductRequestOrderDetails.cs" />
     <Compile Include="Products.cs" />
+    <Compile Include="ProductsWareHouse.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="PurchaseOrderDetails.cs" />
     <Compile Include="PurchaseOrders.cs" />

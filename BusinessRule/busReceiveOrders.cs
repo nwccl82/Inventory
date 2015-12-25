@@ -19,7 +19,7 @@ namespace BusinessRule
             SqlTransaction transaction;
 
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].ReceiveOrders ([SupplierID],[CreatedById],[CreationDate],[IsCompleted],[IsSubmitted],[IsNew]) VALUES (@SupplierID,@CreatedById,getdate(),@IsCompleted,@IsSubmitted,@IsNew)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].ReceiveOrders ([SupplierID],[CreatedById],[CreationDate],[IsCompleted],[IsSubmitted],[IsNew]) VALUES (@SupplierID,@CreatedById,getdate(),@IsCompleted,@IsSubmitted,@IsNew)", con);
             cmd.CommandText = "InsertRR";
             cmd.Parameters.AddWithValue("@SupplierID", drsi.SupplierID);
             cmd.Parameters.AddWithValue("@CreatedById", drsi.CreatedById);
@@ -71,7 +71,7 @@ namespace BusinessRule
             int result = 0;
             con.Open();
             SqlTransaction transaction;
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].ReceiveOrderDetails ([Quantity],[ReceiveOrderID],[ProductID],[IsSubmitted],[PostedToInventory]) VALUES (@Quantity,@ReceiveOrderID,@ProductID,@IsSubmitted,@PostedToInventory)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].ReceiveOrderDetails ([Quantity],[ReceiveOrderID],[ProductID],[IsSubmitted],[PostedToInventory]) VALUES (@Quantity,@ReceiveOrderID,@ProductID,@IsSubmitted,@PostedToInventory)", con);
             cmd.Parameters.AddWithValue("@Quantity", drsi.Quantity);
             //cmd.Parameters.AddWithValue("@UnitCost", drsi.UnitCost);
             cmd.Parameters.AddWithValue("@ReceiveOrderID", drsi.ReceiveOrderID);
@@ -117,7 +117,7 @@ namespace BusinessRule
 
         public FrameWork.ReceiveOrders[] allPO()
         {
-            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone]  FROM [inventory].[dbo].ReceiveOrders a inner join [inventory].[dbo].[Suppliers] b on a.SupplierID = b.ID order by a.id asc";
+            string query = "SELECT a.[ID] ,b.[Company],b.[Address],[CreationDate],SupplierID, [ExpectedDate],[PaymentAmount],b.[TIN],b.[EmailAddress],a.[CreatedById],a.[ClosedById],b.[BusinessPhone]  FROM [dbo].ReceiveOrders a inner join [dbo].[Suppliers] b on a.SupplierID = b.ID order by a.id asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
@@ -133,7 +133,7 @@ namespace BusinessRule
         }
         public FrameWork.ReceiveOrderDetails[] allPurchaseOrderDetails(string ID)
         {
-            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [inventory].[dbo].[ReceiveOrderDetails] a inner join [inventory].[dbo].Products b on a.ProductID = b.ID  where ReceiveOrderID='" + ID + "' order by a.[ID] asc";
+            string query = "SELECT a.[ID] ,[Quantity],[UnitCost],[ProductID],[ProductName]  FROM [dbo].[ReceiveOrderDetails] a inner join [dbo].Products b on a.ProductID = b.ID  where ReceiveOrderID='" + ID + "' order by a.[ID] asc";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);

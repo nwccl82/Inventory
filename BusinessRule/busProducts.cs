@@ -21,7 +21,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("Categories");
             dt.Clear();
 
-            string query = "Select  [ID] ,[ProductName],[ProductCode],[Description] ,[UnitOfMeasureID] ,[CategoryID] ,[ProductSizeID]   FROM [inventory].[dbo].[Products]";
+            string query = "Select  a.[ID] ,[ProductName],[ProductCode],[Description] ,[UnitOfMeasureID] ,[CategoryID] ,[ProductSizeID],[OnHand]   FROM [dbo].[Products] a inner join [dbo].[Inventory] b on a.[ID] = b.[ProductID]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }
@@ -62,9 +62,24 @@ namespace BusinessRule
 
             cmd = new SqlCommand("INSERT INTO [Inventory]([ProductID],[ReorderLevel],[TargetLevel],[MinimumReorderQuantity],[Received],[OnOrder], [Shrinkage],[Shipped],[Allocated],[BackOrdered],[InitialLevel],[OnHand],[Available],[CurrentLevel] ,[BelowTargetLevel],[ReorderQuantity]) VALUES (@ProductID,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0)", con);
             cmd.Parameters.AddWithValue("@ProductID", result);
-            result = cmd.ExecuteNonQuery();
+            //result = cmd.ExecuteNonQuery();
+            //return Message;
+
+            //con.Close();
+            try
+            {
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
+                Message = string.Empty;
+            }
             return Message;
-            con.Close();
         }
     }
 }

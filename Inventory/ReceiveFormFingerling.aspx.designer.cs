@@ -247,13 +247,13 @@ namespace Inventory {
         protected global::System.Web.UI.WebControls.Label Label6;
         
         /// <summary>
-        /// txtDateShipment0 control.
+        /// txtDateArrival control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.TextBox txtDateShipment0;
+        protected global::System.Web.UI.WebControls.TextBox txtDateArrival;
         
         /// <summary>
         /// Label10 control.
@@ -616,6 +616,15 @@ namespace Inventory {
         protected global::System.Web.UI.WebControls.TextBox txtTemperature;
         
         /// <summary>
+        /// btnAdd0 control.
+        /// </summary>
+        /// <remarks>
+        /// Auto-generated field.
+        /// To modify move field declaration from designer file to code-behind file.
+        /// </remarks>
+        protected global::System.Web.UI.WebControls.Button btnAdd0;
+        
+        /// <summary>
         /// Label33 control.
         /// </summary>
         /// <remarks>
@@ -706,13 +715,13 @@ namespace Inventory {
         protected global::System.Web.UI.WebControls.TextBox txtTMissing;
         
         /// <summary>
-        /// btnSave control.
+        /// btnSave1 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Button btnSave;
+        protected global::System.Web.UI.WebControls.Button btnSave1;
         
         /// <summary>
         /// grdList control.

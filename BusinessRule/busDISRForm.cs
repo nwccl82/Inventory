@@ -17,7 +17,7 @@ namespace BusinessRule
             string Message = string.Empty;
             int result = 0;
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].DRSIForm ([CustomerFKID],[ProductFKID],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]) VALUES (@CustomerFKID,@ProductFKID,@TotalPcs,@TotalUOM,@TotalWeight,@TotalUnitCost,@TotalCost, getdate(),@OrderBy,@CheckBy)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].DRSIForm ([CustomerFKID],[ProductFKID],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]) VALUES (@CustomerFKID,@ProductFKID,@TotalPcs,@TotalUOM,@TotalWeight,@TotalUnitCost,@TotalCost, getdate(),@OrderBy,@CheckBy)", con);
             cmd.Parameters.AddWithValue("@CustomerFKID", drsi.CustomerFKID);
             cmd.Parameters.AddWithValue("@ProductFKID", drsi.ProductFKID);
             cmd.Parameters.AddWithValue("@TotalPcs", drsi.TotalPcs);
@@ -47,7 +47,7 @@ namespace BusinessRule
             string Message = string.Empty;
             int result = 0;
             con.Open();
-            SqlCommand cmd = new SqlCommand("INSERT INTO [inventory].[dbo].DRSISub ([DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]) VALUES (@DRSiformID,@BatchNo,@ModuleNo,@CageNo,@Weight,@UnitOfMeasure)", con);
+            SqlCommand cmd = new SqlCommand("INSERT INTO [dbo].DRSISub ([DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]) VALUES (@DRSiformID,@BatchNo,@ModuleNo,@CageNo,@Weight,@UnitOfMeasure)", con);
             cmd.Parameters.AddWithValue("@DRSiformID", drsi.DRSiformID);
             cmd.Parameters.AddWithValue("@BatchNo", drsi.BatchNo);
             cmd.Parameters.AddWithValue("@ModuleNo", drsi.ModuleNo);
@@ -71,7 +71,7 @@ namespace BusinessRule
 
         public FrameWork.DRSIForm[] allDrSIForm()
         {
-            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]  FROM [inventory].[dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
+            string query = "SELECT a.[ID] ,b.[Company],c.[ProductName],[TotalPcs],[TotalUOM],[TotalWeight],[TotalUnitCost],[TotalCost],[OrderDate],[OrderBy],[CheckBy]  FROM [dbo].DRSIForm a inner join [Customers] b on a.CustomerFKID = b.ID inner join [Products] c on a.ProductFKID= c.ID";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);
@@ -87,7 +87,7 @@ namespace BusinessRule
         }
         public FrameWork.DRSISub[] allDrSIFormSub(string ID)
         {
-            string query = "SELECT [ID] ,[DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]  FROM [inventory].[dbo].[DRSISub] where DRSiformID='"+ ID +"'";
+            string query = "SELECT [ID] ,[DRSiformID],[BatchNo],[ModuleNo],[CageNo],[Weight],[UnitOfMeasure]  FROM [dbo].[DRSISub] where DRSiformID='"+ ID +"'";
             DataTable table = new DataTable();
 
             table = DataAccess.DBAdapter.GetRecordSet(query);

@@ -21,7 +21,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("ThickOfFilm");
             dt.Clear();
 
-            string query = "Select  [ID] ,[Thickness]  FROM [inventory].[dbo].[Thick]";
+            string query = "Select  [ID] ,[Thickness]  FROM [dbo].[Thick]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }

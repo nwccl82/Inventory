@@ -39,11 +39,25 @@ namespace BusinessRule
             cmd.Parameters.AddWithValue("@FileAs", supps.FileAs != null ? supps.FileAs : string.Empty);
             cmd.Parameters.AddWithValue("@Attachments", supps.Attachments != null ? supps.Attachments : string.Empty);
             cmd.Parameters.AddWithValue("@TIN", supps.TIN != null ? supps.TIN : string.Empty);
-            
 
 
-            result = cmd.ExecuteNonQuery();
-            con.Close();
+
+            try
+            {
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
+                Message = string.Empty;
+            }
+
+
+            return Message;
             //string query = "select top 1 ID from [DRSIForm] order by id desc";
             //DataTable dt = new DataTable("Customer");
             //dt.Clear();
@@ -53,7 +67,7 @@ namespace BusinessRule
             //{
             //    Message = dt.Rows[0]["ID"].ToString();
             //}
-            return Message;
+         
         }
         public DataTable allSupplier()
         {

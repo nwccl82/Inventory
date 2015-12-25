@@ -42,9 +42,19 @@ namespace BusinessRule
             cmd.Parameters.AddWithValue("@TIN", custs.TIN != null ? custs.TIN : string.Empty);
 
 
-
-            result = cmd.ExecuteNonQuery();
-            con.Close();
+            try
+            {
+                result = cmd.ExecuteNonQuery();
+            }
+            catch (Exception ex)
+            {
+                Message = ex.Message;
+            }
+            finally
+            {
+                con.Close();
+                Message = string.Empty;
+            }
             //string query = "select top 1 ID from [DRSIForm] order by id desc";
             //DataTable dt = new DataTable("Customer");
             //dt.Clear();

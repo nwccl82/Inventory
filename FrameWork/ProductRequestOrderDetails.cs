@@ -14,7 +14,7 @@ namespace FrameWork
         public ProductRequestOrderDetails() { }
         public Int32 ID { get; set; }
 
-        public Single? Quantity { get; set; }
+        public Double? Quantity { get; set; }
 
         public Decimal? UnitCost { get; set; }
 
@@ -22,12 +22,14 @@ namespace FrameWork
 
         public DateTime? DateReceived { get; set; }
 
-        public Int32? PurchaseOrderID { get; set; }
+        public Int32? ProductRequestOrderID { get; set; }
 
         public Int32? ProductID { get; set; }
 
         public Boolean PostedToInventory { get; set; }
 
-        public Boolean IsSubmitted { get; set; } 
+        public Boolean IsSubmitted { get; set; }
+
+        public String ProductName { get; set; }
     }
 }

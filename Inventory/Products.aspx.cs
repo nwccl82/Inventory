@@ -59,27 +59,7 @@ namespace Inventory
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            busProducts busProd = new busProducts();
-            FrameWork.Products frmProd = new  FrameWork.Products();
-            frmProd.ProductName = this.txtProdName.Text;
-            frmProd.ProductCode = this.txtCode.Text;
-            frmProd.Description = this.txtProdDescription.Text;
-            frmProd.CategoryID = int.Parse(this.drpCategory.SelectedValue);
-            frmProd.ProductSizeID = int.Parse(this.drpSize.SelectedValue);
-            frmProd.UnitOfMeasureID = int.Parse(this.drpUOM.SelectedValue);
-            isExisting = isUserExisting();
-            if (isExisting.Equals(true))
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Product already Exists')", true);
-            }
-            else
-            {
-                busProd.insertProducts(frmProd);
-            }
-            DataTable dt = new DataTable("User");
-            dt = busProd.allProducts();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
+            HiddenField1_ModalPopupExtender.Show(); 
         }
         private bool isUserExisting()
         {
@@ -113,6 +93,46 @@ namespace Inventory
             dt = busProd.allProducts();
             GridView1.DataSource = dt;
             GridView1.DataBind();
+        }
+
+        protected void BtnOk_Click(object sender, EventArgs e)
+        {
+            busProducts busProd = new busProducts();
+            FrameWork.Products frmProd = new FrameWork.Products();
+            frmProd.ProductName = this.txtProdName.Text;
+            frmProd.ProductCode = this.txtCode.Text;
+            frmProd.Description = this.txtProdDescription.Text;
+            frmProd.CategoryID = int.Parse(this.drpCategory.SelectedValue);
+            frmProd.ProductSizeID = int.Parse(this.drpSize.SelectedValue);
+            frmProd.UnitOfMeasureID = int.Parse(this.drpUOM.SelectedValue);
+            isExisting = isUserExisting();
+            if (isExisting.Equals(true))
+            {
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Product already Exists')", true);
+            }
+            else
+            {
+
+                string x = busProd.insertProducts(frmProd);
+
+                if (x.Trim() == string.Empty)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully added new Product')", true);
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Failed to added new Product')", true);
+                }
+            }
+            DataTable dt = new DataTable("User");
+            dt = busProd.allProducts();
+            GridView1.DataSource = dt;
+            GridView1.DataBind();
+        }
+
+        protected void btnCancel_Click(object sender, EventArgs e)
+        {
+
         }
     }
 }

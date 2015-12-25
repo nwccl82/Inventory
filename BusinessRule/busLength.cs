@@ -21,7 +21,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("Length");
             dt.Clear();
 
-            string query = "Select  [ID] ,[Lengths]  FROM [inventory].[dbo].[Length]";
+            string query = "Select  [ID] ,[Lengths]  FROM [dbo].[Length]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }

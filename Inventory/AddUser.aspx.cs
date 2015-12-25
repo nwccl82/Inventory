@@ -21,16 +21,16 @@ namespace Inventory
             }
             if (!IsPostBack)
             {
-                busEmployees busemp = new busEmployees();
-                //FrameWork.Login[] log;
-                //log = buslogin.getAllUser();
-                //UserGridView.DataSource = log;
-                //UserGridView.DataBind();
 
                 DataTable dt = new DataTable("User");
-                dt = busemp.allUser();
-                GridView1.DataSource = dt;
-                GridView1.DataBind();
+                busAccessLevels busacc = new busAccessLevels();
+                dt = busacc.allAccessLevel();
+                this.ddpAccess.Items.Clear();
+                this.ddpAccess.Items.Add(new ListItem("select one", "0"));
+                foreach (DataRow dr in dt.Rows)
+                {
+                    this.ddpAccess.Items.Add(new ListItem(dr["AccessName"].ToString(), dr["IDAccess"].ToString()));
+                }
 
                 /*trial code*/
                 //FrameWork.Login a = new FrameWork.Login();
@@ -48,28 +48,7 @@ namespace Inventory
 
         protected void btnSave_Click(object sender, EventArgs e)
         {
-            busEmployees busemp = new busEmployees();
-            Employees frmEmp = new Employees();
-            frmEmp.FullName = this.txtFullname.Text;
-            frmEmp.Email = this.txtEmail.Text;
-            frmEmp.Login = this.txtLogin.Text;
-            frmEmp.LastName = this.txtLastName.Text;
-            frmEmp.passwords = this.txtPassword.Text;
-
-            isExisting = isUserExisting();
-            if (isExisting.Equals(true))
-            {
-                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('User existing')", true);
-            }
-            else
-            {
-                busemp.insertEmployee(frmEmp);
-            }
-            DataTable dt = new DataTable("User");
-            dt = busemp.allUser();
-            GridView1.DataSource = dt;
-            GridView1.DataBind();
-
+            HiddenField1_ModalPopupExtender.Show();       
         }
         private bool isUserExisting()
         {
@@ -91,127 +70,47 @@ namespace Inventory
  
         }
 
-        protected void GridView1_SelectedIndexChanged(object sender, EventArgs e)
+        protected void BtnOk_Click(object sender, EventArgs e)
         {
-            string userid = "";
-            string fName = "";
-            string lName = "";
-            string fullName = "";
-            string address = "";
-            string phoneNo = "";
-            string cellphoneNo = "";
-            string email = "";
-            string position = "";
-            string hello = "";
+            busEmployees busemp = new busEmployees();
+            Employees frmEmp = new Employees();
+            frmEmp.FullName = this.txtFullname.Text;
+            frmEmp.Email = this.txtEmail.Text;
+            frmEmp.Login = this.txtLogin.Text;
+            frmEmp.LastName = this.txtLastName.Text;
+            frmEmp.passwords = this.txtPassword.Text;
+            frmEmp.IDAccess = int.Parse(this.ddpAccess.SelectedValue);
 
-            hello = GridView1.SelectedDataKey["id"].ToString();
-            ViewState["id"] = hello;
-
-            GridView dummyUsergrv = new GridView();
-            dummyUsergrv = (GridView)sender;
-            userid = dummyUsergrv.SelectedRow.Cells[1].Text;
-            fName = dummyUsergrv.SelectedRow.Cells[2].Text;
-            lName = dummyUsergrv.SelectedRow.Cells[3].Text;
-           // fullName = dummyUsergrv.SelectedRow.Cells[5].Text;
-           // address = dummyUsergrv.SelectedRow.Cells[6].Text;
-           // phoneNo = dummyUsergrv.SelectedRow.Cells[7].Text;
-           // cellphoneNo = dummyUsergrv.SelectedRow.Cells[8].Text;
-            email = dummyUsergrv.SelectedRow.Cells[4].Text;
-           // position = dummyUsergrv.SelectedRow.Cells[10].Text;
-
-            if (userid.Equals("&nbsp;"))
+            isExisting = isUserExisting();
+            if (isExisting.Equals(true))
             {
-                this.txtLogin.Text = "";
+                ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('User existing')", true);
             }
             else
             {
-                this.txtLogin.Text = userid;
+                string x = busemp.insertEmployee(frmEmp);
+
+                if (x.Trim() == string.Empty)
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Successfully added new User')", true);
+                }
+                else
+                {
+                    ScriptManager.RegisterClientScriptBlock(this, this.GetType(), "alertMessage", "alert('Failed to added new User')", true);
+                }
             }
+            //DataTable dt = new DataTable("User");
+            //dt = busemp.allUser();
+            //GridView1.DataSource = dt;
+            //GridView1.DataBind();
 
-            if (fName.Equals("&nbsp;"))
-            {
-                this.txtFullname.Text = "";
-            }
-            else
-            {
-                this.txtFullname.Text = fName;
-            }
-
-            if (lName.Equals("&nbsp;"))
-            {
-                this.txtLastName.Text = "";
-            }
-            else
-            {
-                this.txtLastName.Text = lName;
-            }
-
-            //if (fullName.Equals("&nbsp;"))
-            //{
-            //    this.txtFullname.Text = "";
-            //}
-            //else
-            //{
-            //    this.txtFullname.Text = fullName;
-            //}
-
-            //if (address.Equals("&nbsp;"))
-            //{
-            //    this.txtBoxAddress.Text = "";
-            //}
-            //else
-            //{
-            //    this.txtBoxAddress.Text = address;
-            //}
-
-            //if (phoneNo.Equals("&nbsp;"))
-            //{
-            //    this.txtBoxPhoneNo.Text = "";
-            //}
-            //else
-            //{
-            //    this.txtBoxPhoneNo.Text = phoneNo;
-            //}
-
-            //if (cellphoneNo.Equals("&nbsp;"))
-            //{
-            //    this.txtBoxCellphoneNo.Text = "";
-            //}
-            //else
-            //{
-            //    this.txtBoxCellphoneNo.Text = cellphoneNo;
-            //}
-
-            if (email.Equals("&nbsp;"))
-            {
-                this.txtEmail.Text = "";
-            }
-            else
-            {
-                this.txtEmail.Text = email;
-            }
-
-            //if (position.Equals("&nbsp;"))
-            //{
-            //    this.txtBoxPosition.Text = "";
-            //}
-            //else
-            //{
-            //    this.txtBoxPosition.Text = position;
-            //}
         }
 
-   
-        protected void GridView1_RowCommand(object sender, GridViewCommandEventArgs e)
+        protected void btnCancel_Click(object sender, EventArgs e)
         {
-            if (e.CommandName.Equals("del"))
-            {
-                LinkButton lnkBtn = (LinkButton)e.CommandSource;    // the button
-                GridViewRow myRow = (GridViewRow)lnkBtn.Parent.Parent;  // the row
-                GridView myGrid = (GridView)sender; // the gridview
-                string ID = myGrid.DataKeys[myRow.RowIndex].Value.ToString();
-                //hello = myGrid.SelectedRow.Cells[1].Text;
-            }
+
         }
+
+     
     }
 }

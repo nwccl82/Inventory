@@ -61,9 +61,11 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="busAccessLevels.cs" />
     <Compile Include="busCategories.cs" />
     <Compile Include="busColors.cs" />
     <Compile Include="busCustomer.cs" />
+    <Compile Include="busDailyMonitoring.cs" />
     <Compile Include="busDISRForm.cs" />
     <Compile Include="busEmployees.cs" />
     <Compile Include="busLength.cs" />

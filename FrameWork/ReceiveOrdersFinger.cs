@@ -12,49 +12,86 @@ namespace FrameWork
             Helper.CopyProperties(row, this);
         }
          public ReceiveOrdersFinger() { }
-        public Int32 ID { get; set; }
-        public int PurchaseOrderID { get; set; }
+         public int ID { get; set; }
 
-        public DateTime? OrderDate { get; set; }
+         public DateTime? OrderDate { get; set; }
 
-        public Int32? SupplierID { get; set; }
+         public int SupplierID { get; set; }
 
-        public Int32? CreatedById { get; set; }
+         public int CreatedById { get; set; }
 
-        public DateTime? CreationDate { get; set; }
+         public DateTime CreationDate { get; set; }
 
-        public DateTime? ExpectedDate { get; set; }
+         public DateTime ExpectedDate { get; set; }
 
-        public Decimal? ShippingFee { get; set; }
+         public decimal ShippingFee { get; set; }
 
-        public Decimal? Taxes { get; set; }
+         public decimal Taxes { get; set; }
 
-        public DateTime? PaymentDate { get; set; }
+         public DateTime? PaymentDate { get; set; }
 
-        public Decimal? PaymentAmount { get; set; }
+         public decimal? PaymentAmount { get; set; }
 
-        public String PaymentMethod { get; set; }
+         public string PaymentMethod { get; set; }
 
-        public String Notes { get; set; }
+         public string Notes { get; set; }
 
-        public Decimal? OrderSubTotal { get; set; }
+         public decimal OrderSubTotal { get; set; }
 
-        public Decimal? OrderTotal { get; set; }
+         public decimal OrderTotal { get; set; }
 
-        public Int32? SubmittedById { get; set; }
+         public int? SubmittedById { get; set; }
 
-        public DateTime? SubmittedDate { get; set; }
+         public DateTime? SubmittedDate { get; set; }
 
-        public Int32? ClosedById { get; set; }
+         public int? ClosedById { get; set; }
 
-        public DateTime? ClosedDate { get; set; }
+         public DateTime? ClosedDate { get; set; }
 
-        public Boolean IsCompleted { get; set; }
+         public bool IsCompleted { get; set; }
 
-        public Boolean IsSubmitted { get; set; }
+         public bool IsSubmitted { get; set; }
 
-        public Boolean IsNew { get; set; }
+         public bool IsNew { get; set; }
 
-        public String StatusText { get; set; } 
+         public string StatusText { get; set; }
+
+         public DateTime? DateofShipment { get; set; }
+
+         public TimeSpan? TimeofShipment { get; set; }
+
+         public DateTime? DateofArrival { get; set; }
+
+         public TimeSpan? TimeofArrival { get; set; }
+
+         public DateTime? DateReceive { get; set; }
+
+         public TimeSpan? TimeReceive { get; set; }
+
+         public TimeSpan? ReoxygenationStart { get; set; }
+
+         public TimeSpan? ReoxygenationEnd { get; set; }
+
+         public int SalinityInsideTheBag { get; set; }
+
+         public int TemperatureInsideTheBag { get; set; }
+
+         public TimeSpan? TimeAfterReceiptFromAirport { get; set; }
+
+         public int Mortality { get; set; }
+
+         public TimeSpan? TimeofArrival1 { get; set; }
+
+         public TimeSpan? TimeofStocking { get; set; }
+
+         public int Mortality1 { get; set; }
+
+         public int Deformed { get; set; }
+
+         public int Injured { get; set; }
+
+         public int Missing { get; set; }
+
+         public int PurchaseOrderID { get; set; }
     }
 }

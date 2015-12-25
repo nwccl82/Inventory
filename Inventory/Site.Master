@@ -36,19 +36,34 @@
                 <asp:Menu ID="NavigationMenu" runat="server" CssClass="menu" EnableViewState="false"
                     IncludeStyleBlock="false" Orientation="Horizontal">
                     <Items>
-                        <asp:MenuItem NavigateUrl="~/CustomerProfile.aspx" Text="Customer" />
+                        <asp:MenuItem Text="Customer">
+                            <asp:MenuItem NavigateUrl="~/CustomerProfile.aspx" Text="Add Customer" />
+                            <asp:MenuItem NavigateUrl="~/ViewCustomer.aspx" Text="View Customer" />
+                        </asp:MenuItem>
                         <asp:MenuItem Text="DR & SI Forms">
                             <asp:MenuItem NavigateUrl="~/DRSIForm.aspx" Text="DRSIForm" />
                             <asp:MenuItem NavigateUrl="~/ViewDRSIForm.aspx" Text="ViewDRSIForm" />
                         </asp:MenuItem>
-                        <asp:MenuItem NavigateUrl="~/SuppliersProfile.aspx" Text="Supplier" />
+                        <asp:MenuItem Text="Supplier">
+                            <asp:MenuItem NavigateUrl="~/SuppliersProfile.aspx" Text="Add Supplier" />
+                            <asp:MenuItem NavigateUrl="~/ViewSupplier.aspx" Text="View Supplier" />
+                        </asp:MenuItem>
                         <asp:MenuItem NavigateUrl="~/DailyMonitoring.aspx" Text="DailyMonitoring" />
                         <asp:MenuItem NavigateUrl="" Text="Orders">
-                            <asp:MenuItem NavigateUrl="~/PuchaseOrderForm.aspx" Text="Purchase Ordering" />
-                            <asp:MenuItem NavigateUrl="~/ReceiveOrderForm.aspx" Text="Receive Orders" />
+                            <asp:MenuItem Text="Purchase Ordering">
+                                <asp:MenuItem NavigateUrl="~/PuchaseOrderForm.aspx" Text="Place Purchase Ordering" />
+                                <asp:MenuItem NavigateUrl="~/ProductRequestOrderForm.aspx" Text="Product Request Form" />
+                            </asp:MenuItem>
+                            <asp:MenuItem Text="Receive Orders">
+                                <asp:MenuItem NavigateUrl="~/ReceiveOrderForm.aspx" Text="Receive Orders" />
+                                <asp:MenuItem NavigateUrl="~/ReceiveFormFingerling.aspx" Text="Receive Fingerlings Orders" />
+                            </asp:MenuItem>
                         </asp:MenuItem>
                         <asp:MenuItem Text="Database Creation">
-                            <asp:MenuItem NavigateUrl="~/AddUser.aspx" Text="Add User" />
+                            <asp:MenuItem Text="User">
+                                <asp:MenuItem NavigateUrl="~/AddUser.aspx" Text="Add User" />
+                                <asp:MenuItem NavigateUrl="~/ViewUser.aspx" Text="View User" />
+                            </asp:MenuItem>
                             <asp:MenuItem NavigateUrl="~/Category.aspx" Text="Category" />
                             <asp:MenuItem NavigateUrl="~/Products.aspx" Text="Products" />
                             <asp:MenuItem NavigateUrl="~/Sizes.aspx" Text="Sizes" />
@@ -66,12 +81,23 @@
         </div>
     </div>
     <div class="footer">
-        <span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(239, 241, 214);">
-        Copyright © 2015. All Rights Reserved.</span><br 
-            style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;" />
-        <span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif; font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal; line-height: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px; display: inline !important; float: none; background-color: rgb(239, 241, 214);">
-        No portion of this website may be used or reproduced without the prior written 
-        consent of web admin.</span></div>
+        <span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif; font-size: 10px;
+            font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal;
+            line-height: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none;
+            white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+            display: inline !important; float: none; background-color: rgb(239, 241, 214);">
+            Copyright © 2015. All Rights Reserved.</span><br style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif;
+                font-size: 10px; font-style: normal; font-variant: normal; font-weight: normal;
+                letter-spacing: normal; line-height: normal; orphans: auto; text-align: center;
+                text-indent: 0px; text-transform: none; white-space: normal; widows: 1; word-spacing: 0px;
+                -webkit-text-stroke-width: 0px;" />
+        <span style="color: rgb(0, 0, 0); font-family: Verdana, Arial, san-serif; font-size: 10px;
+            font-style: normal; font-variant: normal; font-weight: normal; letter-spacing: normal;
+            line-height: normal; orphans: auto; text-align: center; text-indent: 0px; text-transform: none;
+            white-space: normal; widows: 1; word-spacing: 0px; -webkit-text-stroke-width: 0px;
+            display: inline !important; float: none; background-color: rgb(239, 241, 214);">
+            No portion of this website may be used or reproduced without the prior written consent
+            of web admin.</span></div>
     </form>
 </body>
 </html>

@@ -20,7 +20,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("Colors");
             dt.Clear();
 
-            string query = "Select  [ID] ,[Colors]  FROM [inventory].[dbo].[Color]";
+            string query = "Select  [ID] ,[Colors]  FROM [dbo].[Color]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }

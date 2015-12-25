@@ -21,7 +21,7 @@ namespace BusinessRule
             DataTable dt = new DataTable("UOM");
             dt.Clear();
 
-            string query = "Select  [ID] ,[UnitOfMeasure]  FROM [inventory].[dbo].[UnitOfMeasures]";
+            string query = "Select  [ID] ,[UnitOfMeasure]  FROM [dbo].[UnitOfMeasures]";
             dt = DataAccess.DBAdapter.GetRecordSet(query);
             return dt;
         }
