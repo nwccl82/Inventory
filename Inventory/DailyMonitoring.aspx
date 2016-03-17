@@ -108,7 +108,7 @@
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label18" runat="server" Text="Recommended feeding:"></asp:Label>
+                    <asp:Label ID="Label20" runat="server" Text="Recommended feeding:"></asp:Label>
                 </td>
                 <td>
                     <asp:TextBox ID="txtBoxRecommendedFeeding" runat="server"></asp:TextBox>

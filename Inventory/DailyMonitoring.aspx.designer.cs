@@ -211,13 +211,13 @@ namespace Inventory {
         protected global::System.Web.UI.WebControls.TextBox txtDead;
         
         /// <summary>
-        /// Label18 control.
+        /// Label20 control.
         /// </summary>
         /// <remarks>
         /// Auto-generated field.
         /// To modify move field declaration from designer file to code-behind file.
         /// </remarks>
-        protected global::System.Web.UI.WebControls.Label Label18;
+        protected global::System.Web.UI.WebControls.Label Label20;
         
         /// <summary>
         /// txtBoxRecommendedFeeding control.
