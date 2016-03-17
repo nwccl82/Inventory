@@ -52,3 +52,12 @@ C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\bin\D
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\BusinessRule.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\BusinessRule.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\DataAccess.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\FrameWork.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\DataAccess.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\bin\Debug\FrameWork.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\obj\Debug\BusinessRule.csprojResolveAssemblyReference.cache
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\obj\Debug\BusinessRule.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\BusinessRule\obj\Debug\BusinessRule.pdb

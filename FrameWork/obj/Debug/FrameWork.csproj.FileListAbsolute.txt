@@ -23,3 +23,8 @@ C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\FrameWork\bin\Debu
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\FrameWork\bin\Debug\FrameWork.pdb
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\FrameWork\obj\Debug\FrameWork.dll
 C:\Users\neil\Documents\Visual Studio 2010\Projects\Inventory\FrameWork\obj\Debug\FrameWork.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\FrameWork\bin\Debug\FrameWork.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\FrameWork\bin\Debug\FrameWork.pdb
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\FrameWork\obj\Debug\FrameWork.csprojResolveAssemblyReference.cache
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\FrameWork\obj\Debug\FrameWork.dll
+C:\Users\Winthrop\Desktop\MORONG\Project\Inventory\FrameWork\obj\Debug\FrameWork.pdb

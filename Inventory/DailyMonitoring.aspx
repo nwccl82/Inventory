@@ -37,6 +37,9 @@
                         PopupButtonID="ImageButton1" Format="MM/dd/yyyy">
                     </asp:CalendarExtender>
                 </td>
+                
+            </tr>
+            <tr>
                 <td>
                     <asp:Label ID="Label2" runat="server" Text="Time of Transaction: "></asp:Label>
                 </td>
@@ -52,6 +55,8 @@
                     <asp:DropDownList ID="ddpProduct" runat="server" AutoPostBack="True" OnSelectedIndexChanged="ddpProduct_SelectedIndexChanged">
                     </asp:DropDownList>
                 </td>
+            </tr>
+            <tr>
                 <td>
                     <asp:Label ID="Label4" runat="server" Text="Product Description: "></asp:Label>
                 </td>
@@ -66,6 +71,17 @@
                 <td>
                     <asp:TextBox ID="txtBatch" runat="server"></asp:TextBox>
                 </td>
+                
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label11" runat="server" Text="Age of Fish: "></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
                 <td>
                     <asp:Label ID="Label6" runat="server" Text="Module No: "></asp:Label>
                 </td>
@@ -80,12 +96,7 @@
                 <td>
                     <asp:TextBox ID="txtCage" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:Label ID="Label8" runat="server" Text="Total Count: "></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="txtCount" runat="server"></asp:TextBox>
-                </td>
+                
             </tr>
             <tr>
                 <td>
@@ -94,20 +105,17 @@
                 <td>
                     <asp:TextBox ID="txtDead" runat="server"></asp:TextBox>
                 </td>
-                <td>
-                    <asp:Label ID="Label10" runat="server" Text="Deform: "></asp:Label>
-                </td>
-                <td>
-                    <asp:TextBox ID="txtDeform" runat="server"></asp:TextBox>
-                </td>
             </tr>
             <tr>
                 <td>
-                    <asp:Label ID="Label11" runat="server" Text="Age of Fish: "></asp:Label>
+                    <asp:Label ID="Label18" runat="server" Text="Recommended feeding:"></asp:Label>
                 </td>
                 <td>
-                    <asp:TextBox ID="txtAge" runat="server"></asp:TextBox>
+                    <asp:TextBox ID="txtBoxRecommendedFeeding" runat="server"></asp:TextBox>
                 </td>
+            </tr>
+            <!--tr>
+                
                 <td>
                     <asp:Label ID="Label12" runat="server" Text="Salinity: "></asp:Label>
                 </td>
@@ -128,7 +136,7 @@
                 <td>
                     <asp:TextBox ID="txtweather" runat="server"></asp:TextBox>
                 </td>
-            </tr>
+            </tr-->
             <tr>
                 <td>
                     <asp:Label ID="Label15" runat="server" Text="Actual Weight of Food: "></asp:Label>
@@ -137,6 +145,9 @@
                     <asp:TextBox ID="txtWeightofFood" runat="server" ReadOnly="True"></asp:TextBox>
                     <asp:Button ID="btnAddFood" runat="server" Text="Button" OnClick="btnAddFood_Click" /><%--OnClientClick="return ShowModalPopup()"--%>
                 </td>
+                
+            </tr>
+            <tr>
                 <td>
                     <asp:Label ID="Label16" runat="server" Text="Recorded by: "></asp:Label>
                 </td>
@@ -154,6 +165,22 @@
                 <td>
                 </td>
                 <td>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label8" runat="server" Text="Total Count: "></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtCount" runat="server"></asp:TextBox>
+                </td>
+            </tr>
+            <tr>
+                <td>
+                    <asp:Label ID="Label10" runat="server" Text="Deform: "></asp:Label>
+                </td>
+                <td>
+                    <asp:TextBox ID="txtDeform" runat="server"></asp:TextBox>
                 </td>
             </tr>
             <tr>
