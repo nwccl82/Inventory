@@ -143,7 +143,8 @@
                 </td>
                 <td>
                     <asp:TextBox ID="txtWeightofFood" runat="server" ReadOnly="True"></asp:TextBox>
-                    <asp:Button ID="btnAddFood" runat="server" Text="Button" OnClick="btnAddFood_Click" /><%--OnClientClick="return ShowModalPopup()"--%>
+                    <asp:Button ID="btnAddFood" runat="server" Text="Enter Food" 
+                        OnClick="btnAddFood_Click" /><%--OnClientClick="return ShowModalPopup()"--%>
                 </td>
                 
             </tr>

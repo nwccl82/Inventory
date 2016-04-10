@@ -44,6 +44,7 @@
                             <asp:MenuItem NavigateUrl="~/DRSIForm.aspx" Text="DRSIForm" />
                             <asp:MenuItem NavigateUrl="~/ViewDRSIForm.aspx" Text="ViewDRSIForm" />
                         </asp:MenuItem>
+                        <asp:MenuItem Text="Biometric Sampling" NavigateUrl="~/BiometricEntry.aspx"></asp:MenuItem>
                         <asp:MenuItem Text="Supplier">
                             <asp:MenuItem NavigateUrl="~/SuppliersProfile.aspx" Text="Add Supplier" />
                             <asp:MenuItem NavigateUrl="~/ViewSupplier.aspx" Text="View Supplier" />

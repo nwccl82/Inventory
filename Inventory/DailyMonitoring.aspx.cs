@@ -191,7 +191,7 @@ namespace Inventory
             BusinessRule.busDailyMonitoring busprods = new BusinessRule.busDailyMonitoring();
             string x = busprods.ProductsWareHouse(prods);
             Session["RRID"] = x;
-            txtWeightofFood.Text = this.txtOut.Text;
+            txtWeightofFood.Text = (decimal.Parse(this.txtOut.Text) - decimal.Parse(this.txtReturn.Text)).ToString();
 
             //busCustomer buscust = new busCustomer();
 
